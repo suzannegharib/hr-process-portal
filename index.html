@@ -986,7 +986,7 @@ const PROC=[
  sl:'Real-time update upon save',
  inp:'Employee credentials, updated contact information (address, email, mobile)',
  out:'Updated contact record; audit trail',
- ru:'Work email cannot be changed via self-service. Address must follow UAE format. Mobile number must include country code.',
+ ru:'Work email cannot be changed via self-service. Address must follow EGYPT format. Mobile number must include country code.',
  ex:'System unavailable: submit to HR Helpdesk. Work email changes: raise to IT/HR Specialist.',
  ri:'Outdated contact information may affect payroll delivery, emergency notifications, or document dispatch.',
  dp:'Active employee record; valid Oracle HCM login',
@@ -1022,7 +1022,7 @@ const PROC=[
  ex:'Upload failure: retry or submit to HR. Document type not listed: raise to HR Specialist to create document type.',
  ri:'Expired documents may cause labour compliance violations. Missing documents may delay visa renewals.',
  dp:'Document types configured by HR (SOP-HCM-HS-011)',
- rf:'SOP-HCM-EE-004; SOP-HCM-HS-011; UAE Labour Law',
+ rf:'SOP-HCM-EE-004; SOP-HCM-HS-011; EGYPT Labour Law',
  la:['e','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Me → Document Records'],[2,0,'T','Review existing documents & expiry dates'],[3,0,'D','Upload new document?'],[4,0,'T','Click Add → Select document type'],[5,0,'T','Upload file → Enter issue & expiry dates'],[6,1,'G','Oracle HCM stores document & schedules expiry alerts'],[7,0,'E','Document record saved']],
  cx:[[0,1],[1,2],[2,3],[3,4,'Yes'],[3,7,'No'],[4,5],[5,6],[6,7]]},
@@ -1038,7 +1038,7 @@ const PROC=[
  ex:'Incorrect national ID: raise to HR Helpdesk referencing SOP-HCM-HS-017. System error: contact IT.',
  ri:'Incorrect national identifiers may cause MOHRE/GOSI compliance failures or payroll/visa processing errors.',
  dp:'Active employee record; national ID data entered by HR at hire',
- rf:'SOP-HCM-EE-005; SOP-HCM-HS-017; UAE Federal Law',
+ rf:'SOP-HCM-EE-005; SOP-HCM-HS-017',
  la:['e','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Me → Identification Info'],[2,0,'T','Review national identifier records'],[3,0,'D','Correction needed?'],[4,0,'T','Note discrepancy → Contact HR Helpdesk'],[5,1,'G','HR Specialist updates record per SOP-HCM-HS-017'],[6,0,'E','National identifiers verified']],
  cx:[[0,1],[1,2],[2,3],[3,4,'Yes'],[3,6,'No'],[4,5],[5,6]]},
@@ -1054,7 +1054,7 @@ const PROC=[
  ex:'Incorrect date: raise formal query to HR Helpdesk with supporting hire letter. HR validates against contract and corrects.',
  ri:'Incorrect seniority dates lead to incorrect EOSB/gratuity calculations and potential compliance issues.',
  dp:'Hire record in Oracle HCM; HR Specialist access for correction',
- rf:'SOP-HCM-EE-006; UAE Labour Law (EOSB provisions)',
+ rf:'SOP-HCM-EE-006; EGYPT Labour Law',
  la:['e','h'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Me → Employment Info → Seniority Dates'],[2,0,'T','Review Enterprise Service Date'],[3,0,'T','Review Legal Employer Seniority Date'],[4,0,'D','Dates correct?'],[5,0,'T','Document discrepancy → Submit query to HR Helpdesk'],[6,1,'T','HR Specialist validates vs hire contract'],[7,1,'T','HR Specialist corrects seniority date in Oracle HCM'],[8,0,'E','Seniority dates verified & accurate']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,8,'Yes'],[4,5,'No'],[5,6],[6,7],[7,8]]},
@@ -1081,11 +1081,11 @@ const PROC=[
  sl:'Account change effective from next payroll run; requires HR approval within 1 business day',
  inp:'Bank name, account number, IBAN, account type, effective date',
  out:'Updated bank account record; WPS routing updated',
- ru:'Only UAE-registered bank accounts accepted for WPS compliance. IBAN must be 23 characters for UAE. One active primary account required. Changes take effect from next closed payroll. Existing account cannot be deleted if associated with open payroll.',
+ ru:'IBAN must be 29 characters for EGYPT. One active primary account required. Changes take effect from next closed payroll. Existing account cannot be deleted if associated with open payroll.',
  ex:'Invalid IBAN: system validation error — correct and resubmit. Multiple primary accounts: system will reject — deactivate old account first.',
  ri:'Incorrect bank details cause failed salary payments and WPS compliance breaches.',
- dp:'Payroll not closed for current period; UAE bank account details',
- rf:'SOP-HCM-EE-008; UAE WPS Regulations; DMG Payroll Policy',
+ dp:'Payroll not closed for current period; EGYPT bank account details',
+ rf:'SOP-HCM-EE-008; EGYPT Bank Regulations; DMG Payroll Policy',
  la:['e','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Me → Pay → Bank Accounts'],[2,0,'D','Add new or Edit existing?'],[3,0,'T','Enter bank name, IBAN, account number, type'],[4,0,'T','Set as primary → Submit for approval'],[5,1,'G','Oracle HCM validates IBAN format'],[6,1,'G','HR Specialist approves bank change'],[7,1,'G','Oracle HCM updates payroll routing'],[8,0,'E','Bank account updated for next payroll']],
  cx:[[0,1],[1,2],[2,3,'Add/Edit'],[3,4],[4,5],[5,6],[6,7],[7,8]]},
@@ -1135,7 +1135,7 @@ const PROC=[
  ex:'Entity already exists: update existing record. Registration number conflict: verify with Finance/Legal.',
  ri:'Incorrect legal employer data causes WPS, GOSI, and tax compliance failures.',
  dp:'Trade licence; Finance approval; System Admin access',
- rf:'SOP-HCM-HS-002; UAE Commercial Licensing; Oracle HCM Legal Entity Guide',
+ rf:'SOP-HCM-HS-002; EGYPT Commercial Registration; Oracle HCM Legal Entity Guide',
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud (Admin access)'],[1,0,'T','Navigate to Setup and Maintenance → Legal Entities'],[2,0,'T','Click Create → Enter legal entity name & trade licence'],[3,0,'T','Configure country, registration details & payroll statutory unit'],[4,0,'T','Link to enterprise structure & set effective date'],[5,1,'G','Oracle HCM validates & creates legal employer'],[6,1,'G','Payroll statutory unit linked automatically'],[7,0,'E','Legal employer record active in Oracle HCM']]},
 
@@ -1272,7 +1272,7 @@ const PROC=[
  ex:'Duplicate document type: verify existing list before creating. Expiry not applicable: disable expiry tracking.',
  ri:'Missing or misconfigured document types cause compliance gaps in document management.',
  dp:'Oracle HCM document management module enabled',
- rf:'SOP-HCM-HS-011; UAE Labour Law compliance document list',
+ rf:'SOP-HCM-HS-011; EGYPT Labour Law compliance document list',
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Setup and Maintenance → Document Types'],[2,0,'T','Click Create → Enter document type name & category'],[3,0,'T','Set issuing authority, expiry tracking & country applicability'],[4,1,'G','Oracle HCM saves document type record'],[5,0,'T','Verify document type appears in employee document upload'],[6,0,'E','Document type active & available']]},
 
@@ -1287,7 +1287,7 @@ const PROC=[
  ex:'Document not clear/legible: request resubmission from employee. Expiry in past: flag as non-compliant and initiate renewal process.',
  ri:'Incomplete document records cause visa/labour compliance failures and audit findings.',
  dp:'Employee record exists; document types configured (SOP-HCM-HS-011)',
- rf:'SOP-HCM-HS-012; SOP-HCM-HS-011; UAE Labour Law',
+ rf:'SOP-HCM-HS-012; SOP-HCM-HS-011; EGYPT Labour Law',
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Client Groups → Document Records'],[2,0,'T','Search & select employee'],[3,0,'T','Click Add → Select document type'],[4,0,'T','Upload file → Enter issue & expiry dates'],[5,1,'G','Oracle HCM stores document & configures expiry alert'],[6,0,'T','Verify document listed in employee profile'],[7,0,'E','Document record saved & expiry monitoring active']]},
 
@@ -1366,7 +1366,7 @@ const PROC=[
  ex:'Conflicting documents: escalate to HR Manager. Field grayed out: check role permissions — may require System Admin.',
  ri:'Incorrect personal details affect visa/labour records, payroll, and insurance.',
  dp:'Supporting documents received and verified; active employee record',
- rf:'SOP-HCM-HS-017; UAE Labour Law documentation requirements',
+ rf:'SOP-HCM-HS-017; EGYPT Labour Law documentation requirements',
  la:['h','s'],
  st:[[0,0,'S','Receive employee update request with supporting docs'],[1,0,'T','Login → Navigate to My Client Groups → Person Management'],[2,0,'T','Search employee → Click Edit Personal Details'],[3,0,'D','Supporting doc verified?'],[4,0,'T','Update field (DOB / Nationality / Name / Marital Status)'],[5,0,'T','Attach supporting document → Save'],[6,1,'G','Oracle HCM saves change & records audit trail'],[7,0,'E','Personal details updated; document attached to record']],
  cx:[[0,1],[1,2],[2,3],[3,4,'Yes'],[3,0,'No — request docs'],[4,5],[5,6],[6,7]]},
@@ -1378,7 +1378,7 @@ const PROC=[
  sl:'Same business day',
  inp:'Employee ID, updated address, email, phone number',
  out:'Updated contact record in Oracle HCM',
- ru:'Work email cannot be changed without IT involvement. Home address must follow UAE/applicable country format. All changes logged with HR Specialist ID.',
+ ru:'Work email cannot be changed without IT involvement. Home address must follow EGYPT/applicable country format. All changes logged with HR Specialist ID.',
  ex:'Invalid address format: validate with employee. Work email change: route to IT via ITSM ticket.',
  ri:'Incorrect contact details affect payroll delivery, HR communications, and emergency notifications.',
  dp:'Active employee record; employee confirmation of new details',
@@ -1412,7 +1412,7 @@ const PROC=[
  ex:'Position not available: create position per SOP-HCM-HS-008. Document incomplete: hold hire record until docs received. Duplicate person record found: do not create — update existing record.',
  ri:'Incorrect hire date causes EOSB miscalculation. Missing documents cause visa/WPS compliance failures. Incorrect grade/salary breaches pay equity policy.',
  dp:'Position exists and approved; grade and salary rates configured; documents received',
- rf:'SOP-HCM-HS-020; SOP-HCM-HS-008; UAE Labour Law; WPS Regulations',
+ rf:'SOP-HCM-HS-020; SOP-HCM-HS-008; EGYPT Labour Law; WPS Regulations',
  la:['h','s'],
  st:[[0,0,'S','Receive approved hire documents'],[1,0,'T','Login → My Client Groups → Quick Actions → Hire an Employee'],[2,0,'T','Enter hire date, legal employer & business unit'],[3,0,'T','Enter name (English & Arabic), DOB, gender, nationality'],[4,0,'T','Enter National ID / Emirates ID / passport details'],[5,0,'T','Select job, grade, position, department & location'],[6,0,'T','Set work relationship type (Employee/Contingent)'],[7,0,'T','Enter salary basis, grade & amount'],[8,0,'D','All sections complete & verified?'],[9,0,'T','Review all sections → Click Submit'],[10,1,'G','Oracle HCM creates employee record & assigns employee number'],[11,1,'G','Onboarding journey auto-triggered'],[12,0,'E','Employee record active; number assigned; onboarding started']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9,'Yes'],[8,2,'No — correct'],[9,10],[10,11],[11,12]]},
@@ -1436,14 +1436,14 @@ const PROC=[
  de:'HR Specialist processes employee termination in Oracle HCM Cloud, including selecting termination reason, final pay instructions, asset checklist, and triggering the offboarding journey.',
  ro:'HR Specialist (initiator); HR Manager (approval); Line Manager (acknowledgement)',
  sy:'Oracle HCM Cloud – My Client Groups → Quick Actions → Terminate',
- sl:'Termination record entered on last working day; final pay processed within SLA per UAE Labour Law',
+ sl:'Termination record entered on last working day; final pay processed within SLA per EGYPT Labour Law',
  inp:'Employee ID, termination date, termination reason, final pay basis, line manager acknowledgement',
  out:'Termination record in Oracle HCM; account deactivation triggered; offboarding checklist triggered; final pay calculation initiated',
  ru:'Termination date must match last working day in contract/letter. Reason code must match DMG approved reason list. Line manager must acknowledge before processing. Oracle HCM account must be deactivated on termination date. EOSB calculated automatically based on seniority dates.',
  ex:'Employee in pending transaction: resolve open actions before termination. Disputed termination: hold and escalate to HR Manager/Legal.',
  ri:'Late termination processing causes unauthorized system access, payroll overpayment, and visa overstay.',
  dp:'HR Manager and LM sign-off; final pay calculations ready; IT notified for account deactivation',
- rf:'SOP-HCM-HS-022; UAE Labour Law Articles 120-122; DMG Offboarding Policy',
+ rf:'SOP-HCM-HS-022; EGYPT Labour Law Articles 120-122; DMG Offboarding Policy',
  la:['h','s'],
  st:[[0,0,'S','Receive approved termination request'],[1,0,'T','Login → My Client Groups → Quick Actions → Terminate'],[2,0,'T','Search employee → Enter termination date & reason'],[3,0,'T','Confirm final pay basis & EOSB entitlement'],[4,0,'D','Open transactions exist?'],[5,0,'T','Resolve open transactions before proceeding'],[6,0,'T','Submit termination for HR Manager approval'],[7,1,'G','Oracle HCM processes termination record'],[8,1,'G','Offboarding journey triggered; IT notified for access deactivation'],[9,0,'E','Employee terminated; EOSB calculated; offboarding initiated']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5,'Yes'],[4,6,'No'],[5,3],[6,7],[7,8],[8,9]]},
@@ -1491,7 +1491,7 @@ const PROC=[
  ex:'Open transactions on employee: resolve before transfer. Grade conflict: align with Compensation Manager.',
  ri:'Incorrect BU transfer causes cost centre and payroll allocation errors.',
  dp:'New position/dept exists; manager approval obtained; payroll ready for new BU',
- rf:'SOP-HCM-HS-025; SOP-HCM-LM-016; UAE Labour Law',
+ rf:'SOP-HCM-HS-025; SOP-HCM-LM-016; EGYPT Labour Law',
  la:['l','h','s'],
  st:[[0,1,'S','Login to Oracle HCM Cloud'],[1,1,'T','Navigate to My Client Groups → Quick Actions → Transfer'],[2,1,'T','Search employee → Select assignment sections'],[3,1,'D','Transfer initiator?'],[4,1,'T','HR path: Enter transfer date, type & reason'],[5,1,'T','Update BU, job, grade, dept & location'],[6,1,'T','Update manager & payroll element links → Submit'],[4,0,'T','LM path: Submit transfer via My Team → Actions'],[5,0,'T','HR receives notification → Reviews request'],[6,0,'T','HR finalises transfer details in Oracle HCM'],[7,1,'T','HR reviews seniority dates post-transfer'],[8,2,'G','Oracle HCM updates work assignment & org hierarchy'],[9,1,'E','Transfer complete; assignment & payroll updated']],
  cx:[[0,1],[1,2],[2,3],[3,4,'HR initiates'],[3,4,'LM initiates'],[4,5],[5,6],[6,7],[7,8],[8,9]]},
@@ -1507,7 +1507,7 @@ const PROC=[
  ex:'EOSB dispute: escalate to Finance/Legal before processing. Destination position not found: create per SOP-HCM-HS-008.',
  ri:'Incorrect EOSB handling creates financial and legal liability. Visa cancellation delay causes immigration violation.',
  dp:'EOSB calculation complete; destination position exists; HR Director approval; Legal review',
- rf:'SOP-HCM-HS-026; UAE Labour Law (EOSB); DMG Global Mobility Policy',
+ rf:'SOP-HCM-HS-026; EGYPT Labour Law ; DMG Global Mobility Policy',
  la:['h','s'],
  st:[[0,0,'S','Receive approved global transfer request'],[1,0,'T','Login → My Client Groups → Quick Actions → Global Transfer'],[2,0,'T','Search employee → Select source work relationship'],[3,0,'T','Enter destination legal employer, position & start date'],[4,0,'T','Confirm EOSB settlement decision'],[5,0,'T','Review final pay at source entity'],[6,0,'T','Submit for HR Director approval'],[7,1,'G','Oracle HCM ends source assignment & creates new work relationship'],[8,1,'G','Payroll split between entities processed'],[9,0,'E','Global transfer complete; employee active at destination entity']]},
 
@@ -1518,11 +1518,11 @@ const PROC=[
  sl:'Effective from approved date; processed within 1 business day',
  inp:'Employee ID, new working hours/schedule, effective date, FTE change (if applicable), reason',
  out:'Updated work schedule in Oracle HCM; salary recalculated if FTE changes',
- ru:'FTE reduction requires HR Manager approval. Part-time schedules must conform to approved shift patterns. Salary pro-ration for FTE change is automatic. Working hours change must comply with UAE Labour Law minimums.',
+ ru:'FTE reduction requires HR Manager approval. Part-time schedules must conform to approved shift patterns. Salary pro-ration for FTE change is automatic. Working hours change must comply with EGYPT Labour Law minimums.',
  ex:'Schedule not found: request IT/HR Admin to create schedule. Retroactive change: requires exceptional approval.',
  ri:'Incorrect working hours affect overtime calculations, leave accruals, and statutory hours compliance.',
  dp:'Approved working schedule exists in Oracle HCM; HR Manager sign-off for FTE change',
- rf:'SOP-HCM-HS-027; UAE Labour Law (working hours); DMG Attendance Policy',
+ rf:'SOP-HCM-HS-027; EGYPT Labour Law (working hours); DMG Attendance Policy',
  la:['h','s'],
  st:[[0,0,'S','Receive approved working hours change request'],[1,0,'T','Login → My Client Groups → Quick Actions → Change Working Hours'],[2,0,'T','Search employee → Enter effective date'],[3,0,'T','Select new working schedule / update FTE'],[4,0,'D','FTE change involved?'],[5,0,'T','Submit for HR Manager approval'],[6,1,'G','Oracle HCM recalculates salary & updates schedule'],[7,0,'E','Working hours updated; payroll adjusted']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,6,'No change'],[4,5,'Yes'],[5,6],[6,7]]},
@@ -1585,7 +1585,7 @@ const PROC=[
  ex:'Leave balance exhausted: employee on unpaid leave — notify HR Manager. Certificate not submitted: send reminder; escalate after 3 days.',
  ri:'Inaccurate absence records cause incorrect leave balances, payroll errors, and MOHRE compliance issues.',
  dp:'Absence types and accrual rules configured; leave policy approved',
- rf:'SOP-HCM-HS-031; UAE Labour Law (leave entitlements); DMG Leave Policy',
+ rf:'SOP-HCM-HS-031; EGYPT Labour Law (leave entitlements); DMG Leave Policy',
  la:['h','s'],
  st:[[0,0,'S','Receive absence record or correction request'],[1,0,'T','Login → My Client Groups → Absence Records'],[2,0,'T','Search employee → Click Add/Edit Absence'],[3,0,'T','Select absence type → Enter start & end dates'],[4,0,'D','Requires medical certificate?'],[5,0,'T','Upload medical certificate'],[6,1,'G','Oracle HCM validates balance & records absence'],[7,1,'G','Payroll adjusted & leave balance updated'],[8,0,'E','Absence recorded; balance updated']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5,'Sick leave >3 days'],[4,6,'Other'],[5,6],[6,7],[7,8]]},
@@ -1818,7 +1818,7 @@ const PROC=[
  ex:'Position not approved: escalate to HR Manager. Salary out of range: coordinate with Compensation.',
  ri:'Incomplete hire records delay payroll setup, access provisioning, and visa processing.',
  dp:'Approved funded position; offer letter signed; LM manager role active in Oracle HCM',
- rf:'SOP-HCM-LM-011; SOP-HCM-HS-020; UAE Labour Law',
+ rf:'SOP-HCM-LM-011; SOP-HCM-HS-020; EGYPT Labour Law',
  la:['l','h','s'],
  st:[[0,0,'S','LM receives signed offer & confirms start date'],[1,0,'T','Login → My Team → Add Direct Report → Hire'],[2,0,'T','Enter hire date, legal employer & position'],[3,0,'T','Enter new hire name, employment type → Submit'],[4,2,'G','Oracle HCM notifies HR Specialist'],[5,1,'T','HR Specialist reviews & completes personal data'],[6,1,'T','Enter DOB, nationality, national ID, Arabic name, salary'],[7,1,'T','Validate grade and position → Submit hire record'],[8,2,'G','Oracle HCM creates employee record & assigns number'],[9,2,'G','Onboarding journey auto-triggered'],[10,0,'E','Employee record active; onboarding started']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10]]},
@@ -1914,7 +1914,7 @@ const PROC=[
  sl:'HR processes within 1 business day of receipt',
  inp:'Employee name, new working hours/schedule, FTE change, effective date, business justification',
  out:'Updated work schedule in Oracle HCM; payroll adjusted if FTE changes',
- ru:'LM cannot change working hours directly — HR processes all updates. FTE reduction requires HR Manager approval. Must comply with UAE Labour Law minimum hours. Pro-rated salary calculated by Oracle HCM automatically.',
+ ru:'LM cannot change working hours directly — HR processes all updates. FTE reduction requires HR Manager approval. Must comply with EGYPT Labour Law minimum hours. Pro-rated salary calculated by Oracle HCM automatically.',
  ex:'Schedule not in system: HR creates per SOP-HCM-HS-027. Retroactive change: exceptional approval required.',
  ri:'Incorrect working hours affect overtime, leave accrual, and legal compliance.',
  dp:'HR Manager approval for FTE change; working schedule exists in Oracle HCM',rf:'SOP-HCM-LM-018; SOP-HCM-HS-027',
@@ -2636,33 +2636,33 @@ function buildDocsLibrary(){
       <tr style="display:grid;grid-template-columns:1fr;background:#FFFBEB;padding:8px 20px 4px;border-top:2px dashed #FDE68A">
         <td colspan="3" style="font-size:11.5px;font-weight:800;color:#D97706;text-transform:uppercase;letter-spacing:.7px">Additional Standard Operating Procedures</td>
       </tr>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-OTL-001A</div><div class="dlib-row-title">Team Time Cards &ndash; HR Admin</div></div><div class="dlib-row-desc">HR Admin process for viewing, managing, and correcting team time cards in Oracle HCM OTL.</div><div class="dlib-btns">${sopBtns('../SOP-OTL-001A_Team_Time_Cards_HR_Admin.docx')}<a class="dlib-btn ug" href="${UG_OTL}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-OTL-001B</div><div class="dlib-row-title">Team Time Cards &ndash; Line Manager</div></div><div class="dlib-row-desc">Line Manager process for reviewing and approving team time cards in Oracle HCM OTL.</div><div class="dlib-btns">${sopBtns('../SOP-OTL-001B_Team_Time_Cards_Line_Manager.docx')}<a class="dlib-btn ug" href="${UG_OTL}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-OTL-001C</div><div class="dlib-row-title">Time Card Submission &ndash; Employee</div></div><div class="dlib-row-desc">Employee self-service process for submitting and managing time cards in Oracle HCM OTL.</div><div class="dlib-btns">${sopBtns('../SOP-OTL-001C_Time_Card_Employee.docx')}<a class="dlib-btn ug" href="${UG_OTL}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-OTL-002</div><div class="dlib-row-title">Resolve Time Card Exceptions &ndash; HR Admin</div></div><div class="dlib-row-desc">Process for identifying and resolving time card exceptions and discrepancies in Oracle HCM OTL.</div><div class="dlib-btns">${sopBtns('../SOP-OTL-002_Resolve_Exceptions_HR_Admin.docx')}<a class="dlib-btn ug" href="${UG_OTL}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-OTL-003</div><div class="dlib-row-title">Time Events &amp; Change Requests &ndash; HR Admin</div></div><div class="dlib-row-desc">HR Admin process for managing time events and processing change requests in Oracle HCM OTL.</div><div class="dlib-btns">${sopBtns('../SOP-OTL-003_Time_Events_Change_Requests_HR_Admin.docx')}<a class="dlib-btn ug" href="${UG_OTL}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-OTL-004</div><div class="dlib-row-title">Shifts, Patterns &amp; Schedules &ndash; HRIS Admin</div></div><div class="dlib-row-desc">HRIS Admin process for configuring and managing shift patterns, work schedules, and OTL setup in Oracle HCM.</div><div class="dlib-btns">${sopBtns('../SOP-OTL-004_Shifts_Patterns_Schedules_HRIS_Admin.docx')}<a class="dlib-btn ug" href="${UG_OTL}" target="_blank">&#128218; UG</a></div></div>`,
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-OTL-001A</div><div class="dlib-row-title">Team Time Cards &ndash; HR Admin</div></div><div class="dlib-row-desc">HR Admin process for viewing, managing, and correcting team time cards in Oracle HCM OTL.</div><div class="dlib-btns">${sopBtns('sop/SOP-OTL-001A_Team_Time_Cards_HR_Admin.docx')}<a class="dlib-btn ug" href="${UG_OTL}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-OTL-001B</div><div class="dlib-row-title">Team Time Cards &ndash; Line Manager</div></div><div class="dlib-row-desc">Line Manager process for reviewing and approving team time cards in Oracle HCM OTL.</div><div class="dlib-btns">${sopBtns('sop/SOP-OTL-001B_Team_Time_Cards_Line_Manager.docx')}<a class="dlib-btn ug" href="${UG_OTL}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-OTL-001C</div><div class="dlib-row-title">Time Card Submission &ndash; Employee</div></div><div class="dlib-row-desc">Employee self-service process for submitting and managing time cards in Oracle HCM OTL.</div><div class="dlib-btns">${sopBtns('sop/SOP-OTL-001C_Time_Card_Employee.docx')}<a class="dlib-btn ug" href="${UG_OTL}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-OTL-002</div><div class="dlib-row-title">Resolve Time Card Exceptions &ndash; HR Admin</div></div><div class="dlib-row-desc">Process for identifying and resolving time card exceptions and discrepancies in Oracle HCM OTL.</div><div class="dlib-btns">${sopBtns('sop/SOP-OTL-002_Resolve_Exceptions_HR_Admin.docx')}<a class="dlib-btn ug" href="${UG_OTL}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-OTL-003</div><div class="dlib-row-title">Time Events &amp; Change Requests &ndash; HR Admin</div></div><div class="dlib-row-desc">HR Admin process for managing time events and processing change requests in Oracle HCM OTL.</div><div class="dlib-btns">${sopBtns('sop/SOP-OTL-003_Time_Events_Change_Requests_HR_Admin.docx')}<a class="dlib-btn ug" href="${UG_OTL}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-OTL-004</div><div class="dlib-row-title">Shifts, Patterns &amp; Schedules &ndash; HRIS Admin</div></div><div class="dlib-row-desc">HRIS Admin process for configuring and managing shift patterns, work schedules, and OTL setup in Oracle HCM.</div><div class="dlib-btns">${sopBtns('sop/SOP-OTL-004_Shifts_Patterns_Schedules_HRIS_Admin.docx')}<a class="dlib-btn ug" href="${UG_OTL}" target="_blank">&#128218; UG</a></div></div>`,
     pay:`
       <tr style="display:grid;grid-template-columns:1fr;background:#ECFDF5;padding:8px 20px 4px;border-top:2px dashed #A7F3D0">
         <td colspan="3" style="font-size:11.5px;font-weight:800;color:#059669;text-transform:uppercase;letter-spacing:.7px">Additional Standard Operating Procedures</td>
       </tr>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-001</div><div class="dlib-row-title">Employee Payroll Relationship</div></div><div class="dlib-row-desc">Process for setting up and managing employee payroll relationships in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('../SOP-PAY-001_Employee_Payroll_Relationship.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-002</div><div class="dlib-row-title">Personal Payment Methods</div></div><div class="dlib-row-desc">Process for managing employee personal payment methods (bank accounts, WPS) in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('../SOP-PAY-002_Personal_Payment_Methods.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-003</div><div class="dlib-row-title">Manage Employee Salary</div></div><div class="dlib-row-desc">Process for entering, adjusting, and validating employee salary components within Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('../SOP-PAY-003_Manage_Employee_Salary.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-004</div><div class="dlib-row-title">Employee Element Entry</div></div><div class="dlib-row-desc">Process for managing payroll element entries (allowances, deductions) for employees in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('../SOP-PAY-004_Employee_Element_Entry.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-005</div><div class="dlib-row-title">Retroactive Payroll Calculation</div></div><div class="dlib-row-desc">Process for processing retroactive payroll calculations and back-pay in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('../SOP-PAY-005_Retroactive_Payroll_Calculation.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-006</div><div class="dlib-row-title">Calculate Payroll</div></div><div class="dlib-row-desc">End-to-end payroll calculation run process in Oracle HCM Payroll — including validation and error resolution.</div><div class="dlib-btns">${sopBtns('../SOP-PAY-006_Calculate_Payroll.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-007</div><div class="dlib-row-title">View Payroll Results</div></div><div class="dlib-row-desc">Process for reviewing and reconciling payroll run results and statements in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('../SOP-PAY-007_View_Payroll_Results.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-008</div><div class="dlib-row-title">Corrective Actions</div></div><div class="dlib-row-desc">Process for managing payroll corrections, reversals, and balance adjustments in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('../SOP-PAY-008_Corrective_Actions.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-009</div><div class="dlib-row-title">Calculate Prepayments</div></div><div class="dlib-row-desc">Process for running and managing prepayment calculations before payroll payment processing in Oracle HCM.</div><div class="dlib-btns">${sopBtns('../SOP-PAY-009_Calculate_Prepayments.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-010</div><div class="dlib-row-title">Archive, EFT &amp; Payslips</div></div><div class="dlib-row-desc">Process for archiving payroll, generating EFT payment files, and publishing employee payslips in Oracle HCM.</div><div class="dlib-btns">${sopBtns('../SOP-PAY-010_Archive_EFT_Payslips.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>`,
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-001</div><div class="dlib-row-title">Employee Payroll Relationship</div></div><div class="dlib-row-desc">Process for setting up and managing employee payroll relationships in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-001_Employee_Payroll_Relationship.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-002</div><div class="dlib-row-title">Personal Payment Methods</div></div><div class="dlib-row-desc">Process for managing employee personal payment methods (bank accounts, WPS) in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-002_Personal_Payment_Methods.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-003</div><div class="dlib-row-title">Manage Employee Salary</div></div><div class="dlib-row-desc">Process for entering, adjusting, and validating employee salary components within Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-003_Manage_Employee_Salary.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-004</div><div class="dlib-row-title">Employee Element Entry</div></div><div class="dlib-row-desc">Process for managing payroll element entries (allowances, deductions) for employees in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-004_Employee_Element_Entry.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-005</div><div class="dlib-row-title">Retroactive Payroll Calculation</div></div><div class="dlib-row-desc">Process for processing retroactive payroll calculations and back-pay in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-005_Retroactive_Payroll_Calculation.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-006</div><div class="dlib-row-title">Calculate Payroll</div></div><div class="dlib-row-desc">End-to-end payroll calculation run process in Oracle HCM Payroll — including validation and error resolution.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-006_Calculate_Payroll.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-007</div><div class="dlib-row-title">View Payroll Results</div></div><div class="dlib-row-desc">Process for reviewing and reconciling payroll run results and statements in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-007_View_Payroll_Results.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-008</div><div class="dlib-row-title">Corrective Actions</div></div><div class="dlib-row-desc">Process for managing payroll corrections, reversals, and balance adjustments in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-008_Corrective_Actions.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-009</div><div class="dlib-row-title">Calculate Prepayments</div></div><div class="dlib-row-desc">Process for running and managing prepayment calculations before payroll payment processing in Oracle HCM.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-009_Calculate_Prepayments.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-010</div><div class="dlib-row-title">Archive, EFT &amp; Payslips</div></div><div class="dlib-row-desc">Process for archiving payroll, generating EFT payment files, and publishing employee payslips in Oracle HCM.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-010_Archive_EFT_Payslips.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>`,
     abs:`
       <tr style="display:grid;grid-template-columns:1fr;background:#F5F3FF;padding:8px 20px 4px;border-top:2px dashed #DDD6FE">
         <td colspan="3" style="font-size:11.5px;font-weight:800;color:#7C3AED;text-transform:uppercase;letter-spacing:.7px">Additional Standard Operating Procedures</td>
       </tr>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-ABS-001A</div><div class="dlib-row-title">Submit Leave Request &ndash; Employee</div></div><div class="dlib-row-desc">Employee self-service process for submitting and managing leave requests in Oracle HCM Absence Management.</div><div class="dlib-btns">${sopBtns('../SOP-ABS-001A_Submit_Leave_Request_Employee.docx')}<a class="dlib-btn ug" href="${UG_ABS}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-ABS-003B</div><div class="dlib-row-title">Absence Enrollments &ndash; HR Admin</div></div><div class="dlib-row-desc">HR Admin process for managing employee absence plan enrollments and entitlement setup in Oracle HCM.</div><div class="dlib-btns">${sopBtns('../SOP-ABS-003B_Absence_Enrollments_HR_Admin.docx')}<a class="dlib-btn ug" href="${UG_ABS}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-ABS-003C</div><div class="dlib-row-title">Absence Processes &ndash; HR Admin</div></div><div class="dlib-row-desc">HR Admin process for running absence batch processes, accruals, and period-end absence operations in Oracle HCM.</div><div class="dlib-btns">${sopBtns('../SOP-ABS-003C_Absence_Processes_HR_Admin.docx')}<a class="dlib-btn ug" href="${UG_ABS}" target="_blank">&#128218; UG</a></div></div>`,
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-ABS-001A</div><div class="dlib-row-title">Submit Leave Request &ndash; Employee</div></div><div class="dlib-row-desc">Employee self-service process for submitting and managing leave requests in Oracle HCM Absence Management.</div><div class="dlib-btns">${sopBtns('sop/SOP-ABS-001A_Submit_Leave_Request_Employee.docx')}<a class="dlib-btn ug" href="${UG_ABS}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-ABS-003B</div><div class="dlib-row-title">Absence Enrollments &ndash; HR Admin</div></div><div class="dlib-row-desc">HR Admin process for managing employee absence plan enrollments and entitlement setup in Oracle HCM.</div><div class="dlib-btns">${sopBtns('sop/SOP-ABS-003B_Absence_Enrollments_HR_Admin.docx')}<a class="dlib-btn ug" href="${UG_ABS}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-ABS-003C</div><div class="dlib-row-title">Absence Processes &ndash; HR Admin</div></div><div class="dlib-row-desc">HR Admin process for running absence batch processes, accruals, and period-end absence operations in Oracle HCM.</div><div class="dlib-btns">${sopBtns('sop/SOP-ABS-003C_Absence_Processes_HR_Admin.docx')}<a class="dlib-btn ug" href="${UG_ABS}" target="_blank">&#128218; UG</a></div></div>`,
   };
 
   // ── Consolidated Resources — MASTER DOC + FULL MODULE GUIDES ONLY ─────────
