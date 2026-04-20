@@ -2295,7 +2295,7 @@ function updateDashboard(filtered){
 // DOCUMENTS TAB BUILDER
 // ═══════════════════════════════════════════════════════════════════════════════
 function buildDocs(proc){
-  const d=DOCS[proc.id];
+  const d=DOCX[proc.id];
   if(!d||(!d.pm&&!d.sop&&!d.ug)){
     return '<div class="docs-empty">\uD83D\uDCC2 No linked documents available for this process yet.</div>';
   }
@@ -2621,7 +2621,7 @@ function showDocsLibrary(){
 
 function buildDocsLibrary(){
   let total=0;
-  Object.values(DOCS).forEach(d=>{if(d.pm)total++;if(d.sop)total++;if(d.ug)total++;});
+  Object.values(DOCX).forEach(d=>{if(d.pm)total++;if(d.sop)total++;if(d.ug)total++;});
   total += 14;
 
   // ── Helper: SOP button pair (View in new tab + Download) ──────────────────
@@ -2717,7 +2717,7 @@ function buildDocsLibrary(){
     const extra=modExtraSops[mod.id]||'';
     let rowsHtml='';
     procs.forEach(p=>{
-      const d=DOCS[p.id]||{};
+      const d=DOCX[p.id]||{};
       const pmBtn=d.pm?`<a class="dlib-btn pm" href="${d.pm}" target="_blank">&#128202; Process Map</a>`:'';
       const sopBtn=d.sop?(
         `<a class="dlib-btn sop" href="${d.sop}" target="_blank">&#128196; View SOP</a>`+
