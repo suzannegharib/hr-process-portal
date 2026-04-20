@@ -413,7 +413,7 @@ body{font-family:'Cambria',Georgia,serif;font-size:16px;background:var(--bg);col
         <div class="pc-footer"><span class="role-pill" style="color:#1E3A8A;background:#EFF6FF">HR Specialist</span><span class="sla-badge">⏱ Completed within 1 business day</span></div>
       </div><div class="pc" data-id="hs012" onclick="showProc(&#39;hs012&#39;)">
         <div class="pc-top"><div class="pc-icon">📋</div>
-          <div><div class="pc-ti">Document Records (HR)</div><div class="pc-sop">SOP-HCM-HS-012</div></div>
+          <div><div class="pc-ti">Document Records (HR)</div><div class="pc-sop">SOP_HS_035_Document_Records</div></div>
         </div>
         <div class="pc-desc">HR Specialist adds, updates, and manages employee document records in Oracle HCM Cloud on behalf of employees or for bulk document uploads during onboarding and renewals.</div>
         <div class="pc-footer"><span class="role-pill" style="color:#1E3A8A;background:#EFF6FF">HR Specialist</span><span class="sla-badge">⏱ Same day upload</span></div>
@@ -1276,7 +1276,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Setup and Maintenance → Document Types'],[2,0,'T','Click Create → Enter document type name & category'],[3,0,'T','Set issuing authority, expiry tracking & country applicability'],[4,1,'G','Oracle HCM saves document type record'],[5,0,'T','Verify document type appears in employee document upload'],[6,0,'E','Document type active & available']]},
 
-{id:'hs012',ti:'Document Records (HR)',sop:'sop/SOP-HCM-HS-012',cat:'hs',
+{id:'hs012',ti:'Document Records (HR)',sop:'sop/SOP_HS_035_Document_Records',cat:'hs',
  de:'HR Specialist adds, updates, and manages employee document records in Oracle HCM Cloud on behalf of employees or for bulk document uploads during onboarding and renewals.',
  ro:'HR Specialist (initiator & uploader)',
  sy:'Oracle HCM Cloud – My Client Groups → Document Records',
@@ -1287,7 +1287,7 @@ const PROC=[
  ex:'Document not clear/legible: request resubmission from employee. Expiry in past: flag as non-compliant and initiate renewal process.',
  ri:'Incomplete document records cause visa/labour compliance failures and audit findings.',
  dp:'Employee record exists; document types configured (SOP-HCM-HS-011)',
- rf:'SOP-HCM-HS-012; SOP-HCM-HS-011; EGYPT Labour Law',
+ rf:'SOP_HS_035_Document_Records; SOP-HCM-HS-011; EGYPT Labour Law',
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Client Groups → Document Records'],[2,0,'T','Search & select employee'],[3,0,'T','Click Add → Select document type'],[4,0,'T','Upload file → Enter issue & expiry dates'],[5,1,'G','Oracle HCM stores document & configures expiry alert'],[6,0,'T','Verify document listed in employee profile'],[7,0,'E','Document record saved & expiry monitoring active']]},
 
@@ -1744,7 +1744,7 @@ const PROC=[
  inp:'Manager credentials',out:'Document status and expiry dates reviewed',
  ru:'Read-only access. Sensitive documents (salary letters) not visible to manager. Document uploads via HR Specialist only.',
  ex:'Expired document found: notify HR Specialist immediately.',ri:'Unmonitored document expiry causes visa/compliance breach.',
- dp:'Manager role; document types configured',rf:'SOP-HCM-LM-004; SOP-HCM-HS-012',
+ dp:'Manager role; document types configured',rf:'SOP-HCM-LM-004; SOP_HS_035_Document_Records',
  la:['l','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Team → Select employee'],[2,0,'T','Select Documents section'],[3,1,'G','Oracle HCM displays document list & expiry dates'],[4,0,'T','Review documents & flag any near-expiry'],[5,0,'E','Document status reviewed']]},
 
