@@ -180,7 +180,7 @@ body{font-family:'Cambria',Georgia,serif;font-size:16px;background:var(--bg);col
 .dlib-btn.pm{color:#1D4ED8;border-color:#BFDBFE;background:#EFF6FF}
 .dlib-btn.pm:hover{background:#1D4ED8;color:#fff;border-color:#1D4ED8}
 .dlib-btn.sop{color:#059669;border-color:#A7F3D0;background:#ECFDF5}
-.dlib-btn.sop:hover{background:#059669;color:#fff;border-color:#059669}
+.dlib-btn.hover{background:#059669;color:#fff;border-color:#059669}
 .dlib-btn.ug{color:#D97706;border-color:#FDE68A;background:#FFFBEB}
 .dlib-btn.ug:hover{background:#D97706;color:#fff;border-color:#D97706}
 .dlib-btn.sop-dl{color:#0369A1;border-color:#BAE6FD;background:#F0F9FF}
@@ -899,16 +899,16 @@ const DOCS={
   hs005:{pm:'PM_HS_02_Create_Locations__HS_.html'},
   hs006:{pm:'PM_HS_13_Create_Jobs__HS_.html'},
   hs007:{pm:'PM_HS_08_Create_Grades__HS_.html'},
-  hs008:{pm:'PM_HS_15_Create_Positions__HS_.html',sop:'sop//SOP-HCM-018_Create_Position_HR_Specialist.docx'},
+  hs008:{pm:'PM_HS_15_Create_Positions__HS_.html',sop:'sop/SOP-HCM-018_Create_Position_HR_Specialist.docx'},
   hs009:{pm:'PM_HS_10_Create_Grade_Rates__HS_.html'},
   hs010:{pm:'PM_HS_12_Create_Grade_Ladders__HS_.html'},
   // ── HR Specialist – Data & Governance ────────────────────────────────────
   hs011:{},
   hs012:{pm:'PM_HS_35_Document_Records__HS_.html',sop:'sop/SOP-HCM-015A_Document_Records_HR_Specialist.docx'},
-  hs013:{pm:'PM_HS_17_Journeys__HS_.html',sop:'../SOP-HCM-016A_Journeys_HR_Specialist.docx'},
+  hs013:{pm:'PM_HS_17_Journeys__HS_.html',sop:'sop/SOP-HCM-016A_Journeys_HR_Specialist.docx'},
   hs014:{sop:'sop/SOP-HCM-017_Pending_Workers_HR_Specialist.docx'},
   hs015:{},
-  hs016:{pm:'PM_HS_18_Employment_Info__HS_.html',sop:'../SOP-HCM-020A_Employment_Info_HR_Specialist.docx'},
+  hs016:{pm:'PM_HS_18_Employment_Info__HS_.html',sop:'sop/SOP-HCM-020A_Employment_Info_HR_Specialist.docx'},
   hs017:{pm:'PM_HS_31_Change_Personal_Details__HS_.html'},
   hs018:{pm:'PM_HS_33_Contact_Info__HS_.html'},
   hs019:{pm:'PM_HS_34_Family___Emergency_Contacts__HS_.html'},
@@ -916,11 +916,11 @@ const DOCS={
   hs020:{pm:'PM_HS_20_Hire_an_Employee__HS_.html',sop:'sop/SOP-HCM-001_Hire_Employee.docx'},
   hs021:{sop:'sop/SOP-HCM-011_Contingent_Workers.docx'},
   hs022:{sop:'sop/SOP-HCM-005A_Terminate_HR_Specialist.docx'},
-  hs023:{pm:'PM_HS_29_Change_Manager__HS_.html',sop:'../SOP-HCM-008_Change_Manager.docx'},
-  hs024:{pm:'PM_HS_24_Promote__HS_.html',sop:'../SOP-HCM-002A_Promote_HR_Specialist.docx'},
-  hs025:{pm:'PM_HS_25_Transfer__HS_.html',sop:'../SOP-HCM-003A_Transfer_HR_Specialist.docx'},
-  hs026:{pm:'PM_HS_37_Local_and_Global_Transfer__HS_.html',sop:'../SOP-HCM-004_Local_Global_Transfer.docx'},
-  hs027:{pm:'PM_HS_28_Change_Working_Hours__HS_.html',sop:'../SOP-HCM-009_Change_Working_Hours.docx'},
+  hs023:{pm:'PM_HS_29_Change_Manager__HS_.html',sop:'sop/SOP-HCM-008_Change_Manager.docx'},
+  hs024:{pm:'PM_HS_24_Promote__HS_.html',sop:'sop/SOP-HCM-002A_Promote_HR_Specialist.docx'},
+  hs025:{pm:'PM_HS_25_Transfer__HS_.html',sop:'sop/SOP-HCM-003A_Transfer_HR_Specialist.docx'},
+  hs026:{pm:'PM_HS_37_Local_and_Global_Transfer__HS_.html',sop:'sop/SOP-HCM-004_Local_Global_Transfer.docx'},
+  hs027:{pm:'PM_HS_28_Change_Working_Hours__HS_.html',sop:'sop/SOP-HCM-009_Change_Working_Hours.docx'},
   hs028:{sop:'sop/SOP-PAY-003_Manage_Employee_Salary.docx',ug:UG_PAY},
   hs029:{},
   hs030:{},
@@ -931,7 +931,7 @@ const DOCS={
   hs035:{},
   hs036:{sop:'sop/SOP-PAY-003_Manage_Employee_Salary.docx',ug:UG_PAY},
   hs037:{pm:'PM_HS_26_Change_Assignment__HS_.html',sop:'sop/SOP-HCM-006A_Change_Assignment_HR_Specialist.docx'},
-  hs038:{pm:'PM_HS_38_Approvals__HS_.html',sop:'../SOP-HCM-012A_Approvals_HR_Specialist.docx'},
+  hs038:{pm:'PM_HS_38_Approvals__HS_.html',sop:'sop/SOP-HCM-012A_Approvals_HR_Specialist.docx'},
   // ── Line Manager ──────────────────────────────────────────────────────────
   lm001:{pm:'PM_LM_01_Personal_Details__LM_.html'},
   lm002:{pm:'PM_LM_02_Contact_Information__LM_.html'},
@@ -942,15 +942,15 @@ const DOCS={
   lm007:{},
   lm008:{},
   lm009:{pm:'PM_LM_09_Terminate_Employment.html',sop:'sop/SOP-ABS-002A_Absence_Management_Line_Manager.docx',ug:UG_ABS},
-  lm010:{pm:'PM_LM_21_Direct_Reports.html',sop:'../SOP-HCM-013B_Direct_Reports_Line_Manager.docx'},
+  lm010:{pm:'PM_LM_21_Direct_Reports.html',sop:'sop/SOP-HCM-013B_Direct_Reports_Line_Manager.docx'},
   lm011:{pm:'PM_LM_11_Hire_an_Employee.html'},
   lm012:{},
   lm013:{pm:'PM_LM_09_Terminate_Employment.html',sop:'sop/SOP-HCM-005B_Terminate_Line_Manager.docx'},
   lm014:{pm:'PM_LM_20_Change_Manager.html'},
-  lm015:{pm:'PM_LM_15_Promote.html',sop:'../SOP-HCM-002B_Promote_Line_Manager.docx'},
-  lm016:{pm:'PM_LM_16_Transfer.html',sop:'../SOP-HCM-003B_Transfer_Line_Manager.docx'},
+  lm015:{pm:'PM_LM_15_Promote.html',sop:'sop/SOP-HCM-002B_Promote_Line_Manager.docx'},
+  lm016:{pm:'PM_LM_16_Transfer.html',sop:'sop/SOP-HCM-003B_Transfer_Line_Manager.docx'},
   lm017:{sop:'sop/SOP-HCM-004_Local_Global_Transfer.docx'},
-  lm018:{pm:'PM_LM_19_Change_Working_Hours.html',sop:'../SOP-HCM-009_Change_Working_Hours.docx'},
+  lm018:{pm:'PM_LM_19_Change_Working_Hours.html',sop:'sop/SOP-HCM-009_Change_Working_Hours.docx'},
   lm019:{pm:'PM_LM_15_Promote.html'},
   lm020:{},
   lm021:{},
