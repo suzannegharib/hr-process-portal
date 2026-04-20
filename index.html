@@ -906,7 +906,7 @@ const DOCS={
   hs011:{},
   hs012:{pm:'PM_HS_35_Document_Records__HS_.html',sop:'../SOP-HCM-015A_Document_Records_HR_Specialist.docx'},
   hs013:{pm:'PM_HS_17_Journeys__HS_.html',sop:'../SOP-HCM-016A_Journeys_HR_Specialist.docx'},
-  hs014:{sop:'../SOP-HCM-017_Pending_Workers_HR_Specialist.docx'},
+  hs014:{sop:'sop/SOP-HCM-017_Pending_Workers_HR_Specialist.docx'},
   hs015:{},
   hs016:{pm:'PM_HS_18_Employment_Info__HS_.html',sop:'../SOP-HCM-020A_Employment_Info_HR_Specialist.docx'},
   hs017:{pm:'PM_HS_31_Change_Personal_Details__HS_.html'},
@@ -914,22 +914,22 @@ const DOCS={
   hs019:{pm:'PM_HS_34_Family___Emergency_Contacts__HS_.html'},
   // ── HR Specialist – Employee Lifecycle ───────────────────────────────────
   hs020:{pm:'PM_HS_20_Hire_an_Employee__HS_.html',sop:'../SOP-HCM-001_Hire_Employee.docx'},
-  hs021:{sop:'../SOP-HCM-011_Contingent_Workers.docx'},
-  hs022:{sop:'../SOP-HCM-005A_Terminate_HR_Specialist.docx'},
+  hs021:{sop:'sop/SOP-HCM-011_Contingent_Workers.docx'},
+  hs022:{sop:'sop/SOP-HCM-005A_Terminate_HR_Specialist.docx'},
   hs023:{pm:'PM_HS_29_Change_Manager__HS_.html',sop:'../SOP-HCM-008_Change_Manager.docx'},
   hs024:{pm:'PM_HS_24_Promote__HS_.html',sop:'../SOP-HCM-002A_Promote_HR_Specialist.docx'},
   hs025:{pm:'PM_HS_25_Transfer__HS_.html',sop:'../SOP-HCM-003A_Transfer_HR_Specialist.docx'},
   hs026:{pm:'PM_HS_37_Local_and_Global_Transfer__HS_.html',sop:'../SOP-HCM-004_Local_Global_Transfer.docx'},
   hs027:{pm:'PM_HS_28_Change_Working_Hours__HS_.html',sop:'../SOP-HCM-009_Change_Working_Hours.docx'},
-  hs028:{sop:'../SOP-PAY-003_Manage_Employee_Salary.docx',ug:UG_PAY},
+  hs028:{sop:'sop/SOP-PAY-003_Manage_Employee_Salary.docx',ug:UG_PAY},
   hs029:{},
   hs030:{},
-  hs031:{sop:'../SOP-ABS-003A_Absence_Management_HR_Admin.docx',ug:UG_ABS},
-  hs032:{sop:'../SOP-ABS-003B_Absence_Enrollments_HR_Admin.docx',ug:UG_ABS},
+  hs031:{sop:'sop/SOP-ABS-003A_Absence_Management_HR_Admin.docx',ug:UG_ABS},
+  hs032:{sop:'sop/SOP-ABS-003B_Absence_Enrollments_HR_Admin.docx',ug:UG_ABS},
   hs033:{},
   hs034:{},
   hs035:{},
-  hs036:{sop:'../SOP-PAY-003_Manage_Employee_Salary.docx',ug:UG_PAY},
+  hs036:{sop:'sop/SOP-PAY-003_Manage_Employee_Salary.docx',ug:UG_PAY},
   hs037:{pm:'PM_HS_26_Change_Assignment__HS_.html',sop:'../SOP-HCM-006A_Change_Assignment_HR_Specialist.docx'},
   hs038:{pm:'PM_HS_38_Approvals__HS_.html',sop:'../SOP-HCM-012A_Approvals_HR_Specialist.docx'},
   // ── Line Manager ──────────────────────────────────────────────────────────
@@ -949,7 +949,7 @@ const DOCS={
   lm014:{pm:'PM_LM_20_Change_Manager.html'},
   lm015:{pm:'PM_LM_15_Promote.html',sop:'../SOP-HCM-002B_Promote_Line_Manager.docx'},
   lm016:{pm:'PM_LM_16_Transfer.html',sop:'../SOP-HCM-003B_Transfer_Line_Manager.docx'},
-  lm017:{sop:'../SOP-HCM-004_Local_Global_Transfer.docx'},
+  lm017:{sop:'sop/SOP-HCM-004_Local_Global_Transfer.docx'},
   lm018:{pm:'PM_LM_19_Change_Working_Hours.html',sop:'../SOP-HCM-009_Change_Working_Hours.docx'},
   lm019:{pm:'PM_LM_15_Promote.html'},
   lm020:{},
@@ -963,7 +963,7 @@ const DOCS={
   orc005:{pm:'PM-ORC-SEL-001_Candidate_Selection.html'},
 };
 const PROC=[
-{id:'ee001',ti:'Personal Details',sop:'SOP-HCM-EE-001',cat:'ee',
+{id:'ee001',ti:'Personal Details',sop:'sop/SOP-HCM-EE-001',cat:'ee',
  de:'Employees view and update personal information including name (English & Arabic), date of birth, marital status, and nationality directly via Oracle HCM Cloud self-service.',
  ro:'Employee (self-service initiator)',
  sy:'Oracle HCM Cloud – Me → Personal Details',
@@ -979,7 +979,7 @@ const PROC=[
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Me → Personal Details'],[2,0,'T','Review current personal information'],[3,0,'D','Update required?'],[4,0,'T','Click Edit → Update applicable fields'],[5,0,'T','Review changes → Click Save'],[6,1,'G','Oracle HCM validates & saves record'],[7,0,'E','Personal details updated successfully']],
  cx:[[0,1],[1,2],[2,3],[3,4,'Yes'],[3,7,'No'],[4,5],[5,6],[6,7]]},
 
-{id:'ee002',ti:'Contact Details',sop:'SOP-HCM-EE-002',cat:'ee',
+{id:'ee002',ti:'Contact Details',sop:'sop/SOP-HCM-EE-002',cat:'ee',
  de:'Employees update their contact information including home address, personal email, and personal mobile number via Oracle HCM Cloud self-service.',
  ro:'Employee (self-service initiator)',
  sy:'Oracle HCM Cloud – Me → Contact Details',
@@ -995,7 +995,7 @@ const PROC=[
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Me → Contact Details'],[2,0,'T','Review existing contact information'],[3,0,'D','Update required?'],[4,0,'T','Click Edit → Update address / email / mobile'],[5,0,'T','Review → Click Save'],[6,1,'G','Oracle HCM saves contact record'],[7,0,'E','Contact details updated']],
  cx:[[0,1],[1,2],[2,3],[3,4,'Yes'],[3,7,'No'],[4,5],[5,6],[6,7]]},
 
-{id:'ee003',ti:'Emergency Contacts',sop:'SOP-HCM-EE-003',cat:'ee',
+{id:'ee003',ti:'Emergency Contacts',sop:'sop/SOP-HCM-EE-003',cat:'ee',
  de:'Employees add or update emergency contact details including name, relationship, and phone number to ensure accurate records for emergencies.',
  ro:'Employee (self-service initiator)',
  sy:'Oracle HCM Cloud – Me → Emergency Contacts',
@@ -1011,7 +1011,7 @@ const PROC=[
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Me → Emergency Contacts'],[2,0,'D','Add or Edit?'],[3,0,'T','Click Add → Enter name, relationship, phone'],[4,0,'T','Review → Click Save'],[5,1,'G','Oracle HCM saves emergency contact'],[6,0,'E','Emergency contact record updated']],
  cx:[[0,1],[1,2],[2,3,'Add'],[2,4,'Edit existing'],[3,4],[4,5],[5,6]]},
 
-{id:'ee004',ti:'Document Records',sop:'SOP-HCM-EE-004',cat:'ee',
+{id:'ee004',ti:'Document Records',sop:'sop/SOP-HCM-EE-004',cat:'ee',
  de:'Employees view, upload, and manage personal documents such as passport, visa, Emirates ID, and other required identification documents in Oracle HCM.',
  ro:'Employee (initiator); HR Specialist (validator for key documents)',
  sy:'Oracle HCM Cloud – Me → Document Records',
@@ -1027,7 +1027,7 @@ const PROC=[
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Me → Document Records'],[2,0,'T','Review existing documents & expiry dates'],[3,0,'D','Upload new document?'],[4,0,'T','Click Add → Select document type'],[5,0,'T','Upload file → Enter issue & expiry dates'],[6,1,'G','Oracle HCM stores document & schedules expiry alerts'],[7,0,'E','Document record saved']],
  cx:[[0,1],[1,2],[2,3],[3,4,'Yes'],[3,7,'No'],[4,5],[5,6],[6,7]]},
 
-{id:'ee005',ti:'National Identifiers',sop:'SOP-HCM-EE-005',cat:'ee',
+{id:'ee005',ti:'National Identifiers',sop:'sop/SOP-HCM-EE-005',cat:'ee',
  de:'Employees view their national identifier records (Emirates ID, Passport Number, National ID) stored in Oracle HCM Cloud. Updates to these fields are restricted to HR Specialists.',
  ro:'Employee (view only); HR Specialist (edit)',
  sy:'Oracle HCM Cloud – Me → Identification Info',
@@ -1043,7 +1043,7 @@ const PROC=[
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Me → Identification Info'],[2,0,'T','Review national identifier records'],[3,0,'D','Correction needed?'],[4,0,'T','Note discrepancy → Contact HR Helpdesk'],[5,1,'G','HR Specialist updates record per SOP-HCM-HS-017'],[6,0,'E','National identifiers verified']],
  cx:[[0,1],[1,2],[2,3],[3,4,'Yes'],[3,6,'No'],[4,5],[5,6]]},
 
-{id:'ee006',ti:'Seniority Dates',sop:'SOP-HCM-EE-006',cat:'ee',
+{id:'ee006',ti:'Seniority Dates',sop:'sop/SOP-HCM-EE-006',cat:'ee',
  de:'Employees review their seniority dates including enterprise service date and legal employer seniority date in Oracle HCM Cloud. Discrepancies are escalated to the HR Specialist.',
  ro:'Employee (view & verify); HR Specialist (correction)',
  sy:'Oracle HCM Cloud – Me → Employment Info → Seniority Dates',
@@ -1074,7 +1074,7 @@ const PROC=[
  la:['e','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Me → Pay → Pay Slips'],[2,0,'T','Select pay period / month'],[3,1,'G','Oracle HCM retrieves payslip data'],[4,0,'T','Review earnings, deductions & net pay'],[5,0,'T','Click Download to save PDF payslip'],[6,0,'E','Pay slip accessed & downloaded']]},
 
-{id:'ee008',ti:'Bank Accounts',sop:'SOP-HCM-EE-008',cat:'ee',
+{id:'ee008',ti:'Bank Accounts',sop:'sop/SOP-HCM-EE-008',cat:'ee',
  de:'Employees add or update their bank account details in Oracle HCM Cloud for salary payment, ensuring accurate WPS-compliant routing of payroll.',
  ro:'Employee (initiator); HR Specialist (approval for changes)',
  sy:'Oracle HCM Cloud – Me → Pay → Bank Accounts',
@@ -1090,7 +1090,7 @@ const PROC=[
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Me → Pay → Bank Accounts'],[2,0,'D','Add new or Edit existing?'],[3,0,'T','Enter bank name, IBAN, account number, type'],[4,0,'T','Set as primary → Submit for approval'],[5,1,'G','Oracle HCM validates IBAN format'],[6,1,'G','HR Specialist approves bank change'],[7,1,'G','Oracle HCM updates payroll routing'],[8,0,'E','Bank account updated for next payroll']],
  cx:[[0,1],[1,2],[2,3,'Add/Edit'],[3,4],[4,5],[5,6],[6,7],[7,8]]},
 
-{id:'ee009',ti:'Journeys',sop:'SOP-HCM-EE-009',cat:'ee',
+{id:'ee009',ti:'Journeys',sop:'sop/SOP-HCM-EE-009',cat:'ee',
  de:'Employees access and complete assigned Journeys (onboarding, offboarding, compliance, or milestone journeys) through Oracle HCM Cloud, completing tasks assigned to them.',
  ro:'Employee (task owner); HR Specialist (journey configurer & monitor)',
  sy:'Oracle HCM Cloud – Me → Journeys',
@@ -1108,7 +1108,7 @@ const PROC=[
 
 // ── HR SPECIALIST – STRUCTURE SETUP ──────────────────────────,
 
-{id:'hs001',ti:'Create Divisions',sop:'SOP-HCM-HS-001',cat:'hs',
+{id:'hs001',ti:'Create Divisions',sop:'sop/SOP-HCM-HS-001',cat:'hs',
  de:'HR Specialist creates and maintains Division records in Oracle HCM Cloud as part of the enterprise organisational hierarchy, which underpins reporting structures and assignments.',
  ro:'HR Specialist (initiator & configurator)',
  sy:'Oracle HCM Cloud – My Client Groups → Workforce Structures → Divisions',
@@ -1124,7 +1124,7 @@ const PROC=[
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Client Groups → Workforce Structures → Divisions'],[2,0,'T','Click Create → Enter division name & details'],[3,0,'T','Set effective date & parent organisation'],[4,0,'D','Duplicate exists?'],[5,0,'T','Rename per DMG naming convention'],[6,1,'G','Oracle HCM validates & saves division record'],[7,0,'E','Division created & available for use']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5,'Yes'],[4,6,'No'],[5,6],[6,7]]},
 
-{id:'hs002',ti:'Create Legal Employers',sop:'SOP-HCM-HS-002',cat:'hs',
+{id:'hs002',ti:'Create Legal Employers',sop:'sop/SOP-HCM-HS-002',cat:'hs',
  de:'HR Specialist creates Legal Employer (Legal Entity) records in Oracle HCM Cloud, which are required for payroll processing, employment contracts, and regulatory compliance.',
  ro:'HR Specialist (initiator); IT/System Admin (approval)',
  sy:'Oracle HCM Cloud – Setup and Maintenance → Legal Entities',
@@ -1139,7 +1139,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud (Admin access)'],[1,0,'T','Navigate to Setup and Maintenance → Legal Entities'],[2,0,'T','Click Create → Enter legal entity name & trade licence'],[3,0,'T','Configure country, registration details & payroll statutory unit'],[4,0,'T','Link to enterprise structure & set effective date'],[5,1,'G','Oracle HCM validates & creates legal employer'],[6,1,'G','Payroll statutory unit linked automatically'],[7,0,'E','Legal employer record active in Oracle HCM']]},
 
-{id:'hs003',ti:'Create Business Units',sop:'SOP-HCM-HS-003',cat:'hs',
+{id:'hs003',ti:'Create Business Units',sop:'sop/SOP-HCM-HS-003',cat:'hs',
  de:'HR Specialist creates Business Unit records in Oracle HCM Cloud to define operational divisions within legal entities, enabling business unit-level reporting and HR transactions.',
  ro:'HR Specialist (initiator); Finance (validation)',
  sy:'Oracle HCM Cloud – Setup and Maintenance → Business Units',
@@ -1154,7 +1154,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Setup and Maintenance → Business Units'],[2,0,'T','Click Create → Enter BU name & legal employer'],[3,0,'T','Set effective date & default ledger'],[4,1,'G','Oracle HCM validates & creates business unit'],[5,0,'T','Verify BU appears in assignment fields'],[6,0,'E','Business unit active & available for employee assignment']]},
 
-{id:'hs004',ti:'Create Departments',sop:'SOP-HCM-HS-004',cat:'hs',
+{id:'hs004',ti:'Create Departments',sop:'sop/SOP-HCM-HS-004',cat:'hs',
  de:'HR Specialist creates and maintains Department records in Oracle HCM Cloud, enabling organisational classification of employees and positions within business units.',
  ro:'HR Specialist (initiator)',
  sy:'Oracle HCM Cloud – My Client Groups → Workforce Structures → Departments',
@@ -1169,7 +1169,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Client Groups → Workforce Structures → Departments'],[2,0,'T','Click Create → Enter department name & BU'],[3,0,'T','Add cost centre, effective date & manager'],[4,1,'G','Oracle HCM saves department record'],[5,0,'T','Verify department in Departments list'],[6,0,'E','Department created & active']]},
 
-{id:'hs005',ti:'Create Locations',sop:'SOP-HCM-HS-005',cat:'hs',
+{id:'hs005',ti:'Create Locations',sop:'sop/SOP-HCM-HS-005',cat:'hs',
  de:'HR Specialist creates and manages Location records in Oracle HCM Cloud to represent physical office or work sites used in employee assignments and position management.',
  ro:'HR Specialist (initiator)',
  sy:'Oracle HCM Cloud – My Client Groups → Workforce Structures → Locations',
@@ -1184,7 +1184,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Client Groups → Workforce Structures → Locations'],[2,0,'T','Click Create → Enter location name & full address'],[3,0,'T','Set country, city, postal code & effective date'],[4,1,'G','Oracle HCM validates address & saves location'],[5,0,'T','Confirm location appears in assignment dropdowns'],[6,0,'E','Location created & available for use']]},
 
-{id:'hs006',ti:'Create Jobs',sop:'SOP-HCM-HS-006',cat:'hs',
+{id:'hs006',ti:'Create Jobs',sop:'sop/SOP-HCM-HS-006',cat:'hs',
  de:'HR Specialist creates Job records in Oracle HCM Cloud defining role classifications, job families, and evaluation criteria used in position management and compensation benchmarking.',
  ro:'HR Specialist (initiator); Compensation team (validation)',
  sy:'Oracle HCM Cloud – My Client Groups → Workforce Structures → Jobs',
@@ -1199,7 +1199,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Client Groups → Workforce Structures → Jobs'],[2,0,'T','Click Create → Enter job code, name & job family'],[3,0,'T','Set job function, evaluation system & effective date'],[4,1,'G','Oracle HCM validates & saves job record'],[5,0,'T','Verify job appears in position management'],[6,0,'E','Job record created & active']]},
 
-{id:'hs007',ti:'Create Grades',sop:'SOP-HCM-HS-007',cat:'hs',
+{id:'hs007',ti:'Create Grades',sop:'sop/SOP-HCM-HS-007',cat:'hs',
  de:'HR Specialist creates Grade records in Oracle HCM Cloud defining the salary grade structure used for compensation management, grade-step progression, and position classification.',
  ro:'HR Specialist (initiator); Compensation Manager (approval)',
  sy:'Oracle HCM Cloud – My Client Groups → Workforce Structures → Grades',
@@ -1214,7 +1214,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Client Groups → Workforce Structures → Grades'],[2,0,'T','Click Create → Enter grade name, code & ladder'],[3,0,'T','Set legislative data group & effective date'],[4,1,'G','Oracle HCM validates & creates grade record'],[5,0,'T','Confirm grade visible in compensation screens'],[6,0,'E','Grade created & active for use']]},
 
-{id:'hs008',ti:'Create Positions',sop:'SOP-HCM-HS-008',cat:'hs',
+{id:'hs008',ti:'Create Positions',sop:'sop/SOP-HCM-HS-008',cat:'hs',
  de:'HR Specialist creates Position records in Oracle HCM Cloud, defining approved headcount slots with associated job, grade, department, and location. Positions form the foundation of all hiring and assignment actions.',
  ro:'HR Specialist (initiator); HR Manager (approval)',
  sy:'Oracle HCM Cloud – My Client Groups → Workforce Structures → Positions',
@@ -1230,7 +1230,7 @@ const PROC=[
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Client Groups → Workforce Structures → Positions'],[2,0,'T','Click Create → Enter position title & business details'],[3,0,'T','Link job, grade, dept, location, FTE & effective date'],[4,0,'D','Headcount approved?'],[5,0,'T','Escalate to HR Director for headcount approval'],[6,1,'G','Oracle HCM creates position record & auto-assigns position number'],[7,0,'E','Position active & available for hire']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,6,'Yes'],[4,5,'No'],[5,4],[6,7]]},
 
-{id:'hs009',ti:'Create Grade Rates',sop:'SOP-HCM-HS-009',cat:'hs',
+{id:'hs009',ti:'Create Grade Rates',sop:'sop/SOP-HCM-HS-009',cat:'hs',
  de:'HR Specialist configures Grade Rate records in Oracle HCM Cloud to define salary ranges (minimum, midpoint, maximum) for each grade, enabling compensation-to-grade validation during hire and salary actions.',
  ro:'HR Specialist (initiator); Compensation Manager (approval)',
  sy:'Oracle HCM Cloud – My Client Groups → Compensation → Grade Rates',
@@ -1245,7 +1245,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Client Groups → Compensation → Grade Rates'],[2,0,'T','Click Create → Select grade & currency'],[3,0,'T','Enter minimum, midpoint & maximum salary values'],[4,0,'T','Set effective date → Submit for Compensation Manager approval'],[5,1,'G','Compensation Manager approves in Oracle HCM'],[6,1,'G','Oracle HCM activates grade rate record'],[7,0,'E','Grade rates active & applied to compensation validation']]},
 
-{id:'hs010',ti:'Create Grade Steps',sop:'SOP-HCM-HS-010',cat:'hs',
+{id:'hs010',ti:'Create Grade Steps',sop:'sop/SOP-HCM-HS-010',cat:'hs',
  de:'HR Specialist configures Grade Step records in Oracle HCM Cloud to define incremental salary steps within a grade, enabling step-based progression tied to seniority or performance.',
  ro:'HR Specialist (initiator); Compensation Manager (approval)',
  sy:'Oracle HCM Cloud – My Client Groups → Compensation → Grade Step Rates',
@@ -1261,7 +1261,7 @@ const PROC=[
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Compensation → Grade Step Rates'],[2,0,'T','Select grade ladder → Click Add Step'],[3,0,'T','Enter step number, salary value & effective date'],[4,0,'D','All steps entered?'],[5,1,'G','Oracle HCM saves grade step records'],[6,0,'E','Grade steps configured & progression enabled']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,3,'No — add next step'],[4,5,'Yes'],[5,6]]},
 
-{id:'hs011',ti:'Document Types',sop:'SOP-HCM-HS-011',cat:'hs',
+{id:'hs011',ti:'Document Types',sop:'sop/SOP-HCM-HS-011',cat:'hs',
  de:'HR Specialist creates and manages Document Type records in Oracle HCM Cloud to categorise employee documents, enabling structured storage, expiry tracking, and compliance management.',
  ro:'HR Specialist (initiator)',
  sy:'Oracle HCM Cloud – Setup and Maintenance → Document Types',
@@ -1276,7 +1276,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Setup and Maintenance → Document Types'],[2,0,'T','Click Create → Enter document type name & category'],[3,0,'T','Set issuing authority, expiry tracking & country applicability'],[4,1,'G','Oracle HCM saves document type record'],[5,0,'T','Verify document type appears in employee document upload'],[6,0,'E','Document type active & available']]},
 
-{id:'hs012',ti:'Document Records (HR)',sop:'SOP-HCM-HS-012',cat:'hs',
+{id:'hs012',ti:'Document Records (HR)',sop:'sop/SOP-HCM-HS-012',cat:'hs',
  de:'HR Specialist adds, updates, and manages employee document records in Oracle HCM Cloud on behalf of employees or for bulk document uploads during onboarding and renewals.',
  ro:'HR Specialist (initiator & uploader)',
  sy:'Oracle HCM Cloud – My Client Groups → Document Records',
@@ -1291,7 +1291,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Client Groups → Document Records'],[2,0,'T','Search & select employee'],[3,0,'T','Click Add → Select document type'],[4,0,'T','Upload file → Enter issue & expiry dates'],[5,1,'G','Oracle HCM stores document & configures expiry alert'],[6,0,'T','Verify document listed in employee profile'],[7,0,'E','Document record saved & expiry monitoring active']]},
 
-{id:'hs013',ti:'Manage Checklists',sop:'SOP-HCM-HS-013',cat:'hs',
+{id:'hs013',ti:'Manage Checklists',sop:'sop/SOP-HCM-HS-013',cat:'hs',
  de:'HR Specialist creates and manages onboarding, offboarding, and other lifecycle Checklists (Journeys) in Oracle HCM Cloud, assigning tasks to employees, managers, IT, and other stakeholders.',
  ro:'HR Specialist (checklist creator & monitor)',
  sy:'Oracle HCM Cloud – My Client Groups → Checklist Templates',
@@ -1306,7 +1306,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Client Groups → Checklist Templates'],[2,0,'T','Click Create → Select checklist type (Onboarding/Offboarding)'],[3,0,'T','Add tasks → assign owners, due dates & sequencing'],[4,0,'T','Set eligibility rules & HR event trigger'],[5,1,'G','Oracle HCM saves template & configures auto-assignment'],[6,0,'T','Test checklist with test employee'],[7,0,'E','Checklist template active & auto-assigned on event trigger']]},
 
-{id:'hs014',ti:'Manage User Accounts',sop:'SOP-HCM-HS-014',cat:'hs',
+{id:'hs014',ti:'Manage User Accounts',sop:'sop/SOP-HCM-HS-014',cat:'hs',
  de:'HR Specialist creates, updates, or deactivates Oracle HCM Cloud user accounts and manages Single Sign-On provisioning, ensuring employees have appropriate system access.',
  ro:'HR Specialist (initiator); IT (SSO configuration)',
  sy:'Oracle HCM Cloud – Tools → Security Console → User Accounts',
@@ -1322,7 +1322,7 @@ const PROC=[
  st:[[0,0,'S','Login to Oracle HCM Cloud – Security Console'],[1,0,'T','Navigate to Tools → Security Console → User Accounts'],[2,0,'D','Create or Deactivate?'],[3,0,'T','Create: Enter employee email, name & effective date'],[4,0,'T','Assign roles per SOP-HCM-HS-015 → Save'],[5,1,'G','Oracle HCM provisions account & SSO access'],[6,0,'E','User account active; employee can login to Oracle HCM']],
  cx:[[0,1],[1,2],[2,3,'Create'],[2,5,'Deactivate — end-date account'],[3,4],[4,5],[5,6]]},
 
-{id:'hs015',ti:'Manage Roles & Security',sop:'SOP-HCM-HS-015',cat:'hs',
+{id:'hs015',ti:'Manage Roles & Security',sop:'sop/SOP-HCM-HS-015',cat:'hs',
  de:'HR Specialist configures and assigns Oracle HCM Cloud Role-Based Access Control (RBAC) roles to users, ensuring employees, managers, and HR staff have appropriate data access.',
  ro:'HR Specialist (initiator); IT Security (approval for elevated roles)',
  sy:'Oracle HCM Cloud – Tools → Security Console → Roles',
@@ -1338,7 +1338,7 @@ const PROC=[
  st:[[0,0,'S','Login to Oracle HCM Cloud – Security Console'],[1,0,'T','Navigate to Tools → Security Console → Roles'],[2,0,'T','Search for user account'],[3,0,'T','Add required role(s) with effective date'],[4,0,'D','Elevated access role?'],[5,0,'T','Submit for IT Security/HR Director approval'],[6,1,'G','Oracle HCM assigns role & updates data access profile'],[7,0,'E','Role assigned; user has correct access']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,6,'Standard role'],[4,5,'Yes — elevated'],[5,6],[6,7]]},
 
-{id:'hs016',ti:'Person Spotlight',sop:'SOP-HCM-HS-016',cat:'hs',
+{id:'hs016',ti:'Person Spotlight',sop:'sop/SOP-HCM-HS-016',cat:'hs',
  de:'HR Specialist uses the Person Spotlight feature in Oracle HCM Cloud to obtain a 360° view of an employee record including employment details, documents, assignments, compensation, and history.',
  ro:'HR Specialist (read access); Manager (limited view)',
  sy:'Oracle HCM Cloud – My Client Groups → Person Spotlight',
@@ -1355,7 +1355,7 @@ const PROC=[
 
 // ── HR SPECIALIST – CORE HR ACTIONS ──────────────────────────,
 
-{id:'hs017',ti:'Personal Details (HR)',sop:'SOP-HCM-HS-017',cat:'hs',
+{id:'hs017',ti:'Personal Details (HR)',sop:'sop/SOP-HCM-HS-017',cat:'hs',
  de:'HR Specialist updates restricted personal details (date of birth, nationality, marital status, legal name) in Oracle HCM Cloud on behalf of an employee, with supporting documentation.',
  ro:'HR Specialist (initiator & updater)',
  sy:'Oracle HCM Cloud – My Client Groups → Person Management',
@@ -1371,7 +1371,7 @@ const PROC=[
  st:[[0,0,'S','Receive employee update request with supporting docs'],[1,0,'T','Login → Navigate to My Client Groups → Person Management'],[2,0,'T','Search employee → Click Edit Personal Details'],[3,0,'D','Supporting doc verified?'],[4,0,'T','Update field (DOB / Nationality / Name / Marital Status)'],[5,0,'T','Attach supporting document → Save'],[6,1,'G','Oracle HCM saves change & records audit trail'],[7,0,'E','Personal details updated; document attached to record']],
  cx:[[0,1],[1,2],[2,3],[3,4,'Yes'],[3,0,'No — request docs'],[4,5],[5,6],[6,7]]},
 
-{id:'hs018',ti:'Contact Details (HR)',sop:'SOP-HCM-HS-018',cat:'hs',
+{id:'hs018',ti:'Contact Details (HR)',sop:'sop/SOP-HCM-HS-018',cat:'hs',
  de:'HR Specialist updates employee contact information including home address, personal email, and phone number in Oracle HCM Cloud, typically during onboarding or upon employee request.',
  ro:'HR Specialist (initiator)',
  sy:'Oracle HCM Cloud – My Client Groups → Person Management → Contact Details',
@@ -1386,7 +1386,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Receive contact update request from employee'],[1,0,'T','Login → Navigate to My Client Groups → Person Management'],[2,0,'T','Search employee → Select Contact Details'],[3,0,'T','Click Edit → Update address, email or phone'],[4,0,'T','Review changes → Save'],[5,1,'G','Oracle HCM saves contact record & audit trail'],[6,0,'E','Contact details updated']]},
 
-{id:'hs019',ti:'Emergency Contacts (HR)',sop:'SOP-HCM-HS-019',cat:'hs',
+{id:'hs019',ti:'Emergency Contacts (HR)',sop:'sop/SOP-HCM-HS-019',cat:'hs',
  de:'HR Specialist adds or updates emergency contact details for an employee in Oracle HCM Cloud, typically during onboarding or upon employee request with supporting information.',
  ro:'HR Specialist (initiator)',
  sy:'Oracle HCM Cloud – My Client Groups → Person Management → Emergency Contacts',
@@ -1401,7 +1401,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Receive emergency contact update request'],[1,0,'T','Login → Navigate to My Client Groups → Person Management'],[2,0,'T','Search employee → Select Emergency Contacts'],[3,0,'T','Click Add/Edit → Enter name, relationship & phone'],[4,0,'T','Review → Save'],[5,1,'G','Oracle HCM saves emergency contact record'],[6,0,'E','Emergency contact updated']]},
 
-{id:'hs020',ti:'Hire an Employee (HR)',sop:'SOP-HCM-HS-020',cat:'hs',
+{id:'hs020',ti:'Hire an Employee (HR)',sop:'sop/SOP-HCM-HS-020',cat:'hs',
  de:'HR Specialist initiates and completes the end-to-end hire process for a new employee in Oracle HCM Cloud, including creating the person record, work relationship, assignment, and triggering the onboarding journey.',
  ro:'HR Specialist (initiator & data entry); HR Manager (approval for sensitive fields)',
  sy:'Oracle HCM Cloud – My Client Groups → Quick Actions → Hire an Employee',
@@ -1417,7 +1417,7 @@ const PROC=[
  st:[[0,0,'S','Receive approved hire documents'],[1,0,'T','Login → My Client Groups → Quick Actions → Hire an Employee'],[2,0,'T','Enter hire date, legal employer & business unit'],[3,0,'T','Enter name (English & Arabic), DOB, gender, nationality'],[4,0,'T','Enter National ID / Emirates ID / passport details'],[5,0,'T','Select job, grade, position, department & location'],[6,0,'T','Set work relationship type (Employee/Contingent)'],[7,0,'T','Enter salary basis, grade & amount'],[8,0,'D','All sections complete & verified?'],[9,0,'T','Review all sections → Click Submit'],[10,1,'G','Oracle HCM creates employee record & assigns employee number'],[11,1,'G','Onboarding journey auto-triggered'],[12,0,'E','Employee record active; number assigned; onboarding started']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9,'Yes'],[8,2,'No — correct'],[9,10],[10,11],[11,12]]},
 
-{id:'hs021',ti:'Add Work Relationship',sop:'SOP-HCM-HS-021',cat:'hs',
+{id:'hs021',ti:'Add Work Relationship',sop:'sop/SOP-HCM-HS-021',cat:'hs',
  de:'HR Specialist adds a new work relationship to an existing employee record in Oracle HCM Cloud, enabling the employee to work under an additional legal employer or business unit concurrently.',
  ro:'HR Specialist (initiator)',
  sy:'Oracle HCM Cloud – My Client Groups → Person Management → Work Relationship',
@@ -1432,7 +1432,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Receive approved request for additional work relationship'],[1,0,'T','Login → My Client Groups → Person Management'],[2,0,'T','Search employee → Select Work Relationship'],[3,0,'T','Click Add → Select new legal employer & type'],[4,0,'T','Enter start date, position & assignment details'],[5,1,'G','Oracle HCM validates & creates work relationship'],[6,0,'T','Verify new assignment visible in employee record'],[7,0,'E','Work relationship added; employee active under new legal employer']]},
 
-{id:'hs022',ti:'Terminate',sop:'SOP-HCM-HS-022',cat:'hs',
+{id:'hs022',ti:'Terminate',sop:'sop/SOP-HCM-HS-022',cat:'hs',
  de:'HR Specialist processes employee termination in Oracle HCM Cloud, including selecting termination reason, final pay instructions, asset checklist, and triggering the offboarding journey.',
  ro:'HR Specialist (initiator); HR Manager (approval); Line Manager (acknowledgement)',
  sy:'Oracle HCM Cloud – My Client Groups → Quick Actions → Terminate',
@@ -1448,7 +1448,7 @@ const PROC=[
  st:[[0,0,'S','Receive approved termination request'],[1,0,'T','Login → My Client Groups → Quick Actions → Terminate'],[2,0,'T','Search employee → Enter termination date & reason'],[3,0,'T','Confirm final pay basis & EOSB entitlement'],[4,0,'D','Open transactions exist?'],[5,0,'T','Resolve open transactions before proceeding'],[6,0,'T','Submit termination for HR Manager approval'],[7,1,'G','Oracle HCM processes termination record'],[8,1,'G','Offboarding journey triggered; IT notified for access deactivation'],[9,0,'E','Employee terminated; EOSB calculated; offboarding initiated']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5,'Yes'],[4,6,'No'],[5,3],[6,7],[7,8],[8,9]]},
 
-{id:'hs023',ti:'Change Manager',sop:'SOP-HCM-HS-023',cat:'hs',
+{id:'hs023',ti:'Change Manager',sop:'sop/SOP-HCM-HS-023',cat:'hs',
  de:'HR Specialist updates the reporting manager for an employee in Oracle HCM Cloud, ensuring org hierarchy, approval workflows, and system notifications reflect the new reporting structure.',
  ro:'HR Specialist (initiator)',
  sy:'Oracle HCM Cloud – My Client Groups → Quick Actions → Change Manager',
@@ -1464,7 +1464,7 @@ const PROC=[
  st:[[0,0,'S','Receive manager change request'],[1,0,'T','Login → My Client Groups → Quick Actions → Change Manager'],[2,0,'T','Search employee → Select current assignment'],[3,0,'T','Enter effective date → Search & select new manager'],[4,0,'D','New manager active with manager role?'],[5,0,'T','Activate manager role for new manager first'],[6,0,'T','Review & Submit'],[7,1,'G','Oracle HCM updates manager field & reroutes workflows'],[8,0,'E','Manager updated; org hierarchy & workflows reflect change']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,6,'Yes'],[4,5,'No'],[5,4],[6,7],[7,8]]},
 
-{id:'hs024',ti:'Promote (HR)',sop:'SOP-HCM-HS-024',cat:'hs',
+{id:'hs024',ti:'Promote (HR)',sop:'sop/SOP-HCM-HS-024',cat:'hs',
  de:'HR Specialist processes an employee promotion in Oracle HCM Cloud, updating job title, grade, position, and salary, with seniority date review and manager approval workflow.',
  ro:'HR Specialist (initiator); HR Manager (approval); Compensation (salary validation)',
  sy:'Oracle HCM Cloud – My Client Groups → Quick Actions → Promote',
@@ -1480,7 +1480,7 @@ const PROC=[
  st:[[0,0,'S','Receive approved promotion request'],[1,0,'T','Login → My Client Groups → Quick Actions → Promote'],[2,0,'T','Search employee → Enter promotion date & reason'],[3,0,'T','Update job, grade, position & business title'],[4,0,'T','Update department & manager if applicable'],[5,0,'T','Enter new salary basis & amount'],[6,0,'T','Review seniority dates'],[7,0,'D','All sections correct?'],[8,0,'T','Submit → Approval workflow to HR Manager'],[9,1,'G','HR Manager approves in Oracle HCM'],[10,1,'G','Oracle HCM updates employment record & payroll'],[11,0,'E','Promotion processed; new grade & salary effective']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8,'Yes'],[7,2,'No — correct'],[8,9],[9,10],[10,11]]},
 
-{id:'hs025',ti:'Transfer (HR)',sop:'SOP-HCM-HS-025',cat:'hs',
+{id:'hs025',ti:'Transfer (HR)',sop:'sop/SOP-HCM-HS-025',cat:'hs',
  de:'HR Specialist processes employee transfers between departments, business units, or locations in Oracle HCM Cloud. Transfer may be initiated by HR Specialist directly or submitted by a Line Manager and finalised by HR.',
  ro:'HR Specialist (initiator or finaliser); Line Manager (alternate initiator)',
  sy:'Oracle HCM Cloud – My Client Groups → Quick Actions → Transfer',
@@ -1496,7 +1496,7 @@ const PROC=[
  st:[[0,1,'S','Login to Oracle HCM Cloud'],[1,1,'T','Navigate to My Client Groups → Quick Actions → Transfer'],[2,1,'T','Search employee → Select assignment sections'],[3,1,'D','Transfer initiator?'],[4,1,'T','HR path: Enter transfer date, type & reason'],[5,1,'T','Update BU, job, grade, dept & location'],[6,1,'T','Update manager & payroll element links → Submit'],[4,0,'T','LM path: Submit transfer via My Team → Actions'],[5,0,'T','HR receives notification → Reviews request'],[6,0,'T','HR finalises transfer details in Oracle HCM'],[7,1,'T','HR reviews seniority dates post-transfer'],[8,2,'G','Oracle HCM updates work assignment & org hierarchy'],[9,1,'E','Transfer complete; assignment & payroll updated']],
  cx:[[0,1],[1,2],[2,3],[3,4,'HR initiates'],[3,4,'LM initiates'],[4,5],[5,6],[6,7],[7,8],[8,9]]},
 
-{id:'hs026',ti:'Global Transfer',sop:'SOP-HCM-HS-026',cat:'hs',
+{id:'hs026',ti:'Global Transfer',sop:'sop/SOP-HCM-HS-026',cat:'hs',
  de:'HR Specialist processes a Global Transfer for an employee moving between legal employers in Oracle HCM Cloud, creating a new work relationship at the destination entity and ending the current relationship.',
  ro:'HR Specialist (initiator); HR Manager (approval); Finance (EOSB/settlement review)',
  sy:'Oracle HCM Cloud – My Client Groups → Quick Actions → Global Transfer',
@@ -1511,7 +1511,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Receive approved global transfer request'],[1,0,'T','Login → My Client Groups → Quick Actions → Global Transfer'],[2,0,'T','Search employee → Select source work relationship'],[3,0,'T','Enter destination legal employer, position & start date'],[4,0,'T','Confirm EOSB settlement decision'],[5,0,'T','Review final pay at source entity'],[6,0,'T','Submit for HR Director approval'],[7,1,'G','Oracle HCM ends source assignment & creates new work relationship'],[8,1,'G','Payroll split between entities processed'],[9,0,'E','Global transfer complete; employee active at destination entity']]},
 
-{id:'hs027',ti:'Change Working Hours',sop:'SOP-HCM-HS-027',cat:'hs',
+{id:'hs027',ti:'Change Working Hours',sop:'sop/SOP-HCM-HS-027',cat:'hs',
  de:'HR Specialist updates an employee\'s working hours pattern or FTE in Oracle HCM Cloud, adjusting the work schedule and triggering any applicable salary or allowance recalculations.',
  ro:'HR Specialist (initiator); HR Manager (approval for FTE change)',
  sy:'Oracle HCM Cloud – My Client Groups → Quick Actions → Change Working Hours',
@@ -1527,7 +1527,7 @@ const PROC=[
  st:[[0,0,'S','Receive approved working hours change request'],[1,0,'T','Login → My Client Groups → Quick Actions → Change Working Hours'],[2,0,'T','Search employee → Enter effective date'],[3,0,'T','Select new working schedule / update FTE'],[4,0,'D','FTE change involved?'],[5,0,'T','Submit for HR Manager approval'],[6,1,'G','Oracle HCM recalculates salary & updates schedule'],[7,0,'E','Working hours updated; payroll adjusted']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,6,'No change'],[4,5,'Yes'],[5,6],[6,7]]},
 
-{id:'hs028',ti:'Change Salary',sop:'SOP-HCM-HS-028',cat:'hs',
+{id:'hs028',ti:'Change Salary',sop:'sop/SOP-HCM-HS-028',cat:'hs',
  de:'HR Specialist processes a salary change for an employee in Oracle HCM Cloud following an approved compensation review, correction, or market adjustment, ensuring grade compliance.',
  ro:'HR Specialist (initiator); Compensation Manager (approval); HR Manager (sign-off)',
  sy:'Oracle HCM Cloud – My Client Groups → Quick Actions → Compensation',
@@ -1543,7 +1543,7 @@ const PROC=[
  st:[[0,0,'S','Receive approved salary change request'],[1,0,'T','Login → My Client Groups → Quick Actions → Compensation'],[2,0,'T','Search employee → Click Edit Salary'],[3,0,'T','Enter new salary amount & effective date'],[4,0,'T','Enter reason & attach approval documentation'],[5,0,'D','Salary within grade range?'],[6,0,'T','Escalate to Compensation Manager for exception'],[7,0,'T','Submit for approval workflow'],[8,1,'G','Oracle HCM updates salary record & payroll'],[9,0,'E','Salary change effective; payroll updated']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5],[5,7,'Yes'],[5,6,'No'],[6,7],[7,8],[8,9]]},
 
-{id:'hs029',ti:'Change Business Title',sop:'SOP-HCM-HS-029',cat:'hs',
+{id:'hs029',ti:'Change Business Title',sop:'sop/SOP-HCM-HS-029',cat:'hs',
  de:'HR Specialist updates an employee\'s Business Title in Oracle HCM Cloud to reflect an approved title change without a grade or salary change.',
  ro:'HR Specialist (initiator); HR Manager (approval)',
  sy:'Oracle HCM Cloud – My Client Groups → Quick Actions → Change Business Title',
@@ -1558,7 +1558,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Receive approved title change request'],[1,0,'T','Login → My Client Groups → Quick Actions → Change Business Title'],[2,0,'T','Search employee → Enter new business title & effective date'],[3,0,'T','Enter reason → Submit'],[4,1,'G','Oracle HCM approval workflow triggered'],[5,1,'G','HR Manager approves in Oracle HCM'],[6,1,'G','Oracle HCM updates title in employee record & org chart'],[7,0,'E','Business title updated in Oracle HCM']]},
 
-{id:'hs030',ti:'Mass Update',sop:'SOP-HCM-HS-030',cat:'hs',
+{id:'hs030',ti:'Mass Update',sop:'sop/SOP-HCM-HS-030',cat:'hs',
  de:'HR Specialist uses Oracle HCM Cloud Mass Update functionality to apply the same change (e.g., cost centre update, location change) to multiple employees simultaneously.',
  ro:'HR Specialist (initiator); HR Manager (approval for changes affecting 10+ employees)',
  sy:'Oracle HCM Cloud – My Client Groups → Mass Update',
@@ -1574,7 +1574,7 @@ const PROC=[
  st:[[0,0,'S','Receive approved mass update request'],[1,0,'T','Login → My Client Groups → Mass Update'],[2,0,'T','Define population filter criteria'],[3,0,'T','Select field to update & enter new value'],[4,0,'T','Preview population count → Validate sample records'],[5,0,'D','Population correct & approved?'],[6,0,'T','Revise criteria or escalate for approval'],[7,0,'T','Submit mass update'],[8,1,'G','Oracle HCM processes bulk record update'],[9,0,'T','Verify updated records & audit trail'],[10,0,'E','Mass update complete; all records updated']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5],[5,7,'Yes'],[5,6,'No'],[6,5],[7,8],[8,9],[9,10]]},
 
-{id:'hs031',ti:'Absence Management (HR)',sop:'SOP-HCM-HS-031',cat:'hs',
+{id:'hs031',ti:'Absence Management (HR)',sop:'sop/SOP-HCM-HS-031',cat:'hs',
  de:'HR Specialist manages employee absence records in Oracle HCM Cloud, including creating, correcting, or approving absence entries for annual leave, sick leave, and other absence types on behalf of employees or managers.',
  ro:'HR Specialist (admin & correction); Line Manager (approval); Employee (self-service request)',
  sy:'Oracle HCM Cloud – My Client Groups → Absence Records',
@@ -1590,7 +1590,7 @@ const PROC=[
  st:[[0,0,'S','Receive absence record or correction request'],[1,0,'T','Login → My Client Groups → Absence Records'],[2,0,'T','Search employee → Click Add/Edit Absence'],[3,0,'T','Select absence type → Enter start & end dates'],[4,0,'D','Requires medical certificate?'],[5,0,'T','Upload medical certificate'],[6,1,'G','Oracle HCM validates balance & records absence'],[7,1,'G','Payroll adjusted & leave balance updated'],[8,0,'E','Absence recorded; balance updated']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5,'Sick leave >3 days'],[4,6,'Other'],[5,6],[6,7],[7,8]]},
 
-{id:'hs032',ti:'Manage Checklist Tasks',sop:'SOP-HCM-HS-032',cat:'hs',
+{id:'hs032',ti:'Manage Checklist Tasks',sop:'sop/SOP-HCM-HS-032',cat:'hs',
  de:'HR Specialist monitors and manages outstanding checklist tasks in Oracle HCM Cloud, following up with task owners, marking tasks complete, and escalating overdue tasks.',
  ro:'HR Specialist (monitor & escalator)',
  sy:'Oracle HCM Cloud – My Client Groups → Checklist Administration',
@@ -1606,7 +1606,7 @@ const PROC=[
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Client Groups → Checklist Administration'],[2,0,'T','Filter by pending / overdue tasks'],[3,0,'D','Tasks overdue?'],[4,0,'T','Send escalation notification to task owner'],[5,0,'T','Mark completed tasks as done'],[6,1,'G','Oracle HCM updates journey completion percentage'],[7,0,'E','Checklist tasks managed; progress updated']],
  cx:[[0,1],[1,2],[2,3],[3,4,'Yes — overdue'],[3,5,'No — review'],[4,5],[5,6],[6,7]]},
 
-{id:'hs033',ti:'Reports',sop:'SOP-HCM-HS-033',cat:'hs',
+{id:'hs033',ti:'Reports',sop:'sop/SOP-HCM-HS-033',cat:'hs',
  de:'HR Specialist generates standard and custom reports in Oracle HCM Cloud to support HR analytics, compliance, payroll reconciliation, and management reporting.',
  ro:'HR Specialist (report generator); HR Manager (consumer)',
  sy:'Oracle HCM Cloud – Reports and Analytics → OTBI / HCM Extracts',
@@ -1621,7 +1621,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Reports and Analytics → OTBI'],[2,0,'T','Select report from catalogue or create new'],[3,0,'T','Set filter parameters (legal employer, dates, population)'],[4,1,'G','Oracle HCM runs report query'],[5,0,'T','Review output → Export to Excel / PDF'],[6,0,'T','Save report for future use if applicable'],[7,0,'E','Report generated & shared as appropriate']]},
 
-{id:'hs034',ti:'Employment Verification',sop:'SOP-HCM-HS-034',cat:'hs',
+{id:'hs034',ti:'Employment Verification',sop:'sop/SOP-HCM-HS-034',cat:'hs',
  de:'HR Specialist generates an employment verification letter from Oracle HCM Cloud for an employee, confirming employment details for bank, visa, tenancy, or other official purposes.',
  ro:'HR Specialist (generator); Employee (requestor)',
  sy:'Oracle HCM Cloud – My Client Groups → Employment Verification / HR Letters',
@@ -1637,7 +1637,7 @@ const PROC=[
  st:[[0,0,'S','Receive employee verification letter request'],[1,0,'T','Login → My Client Groups → Employment Verification'],[2,0,'T','Search employee → Select letter type'],[3,0,'D','Salary to be included?'],[4,0,'T','Obtain HR Manager approval for salary disclosure'],[5,0,'T','Generate letter from Oracle HCM template'],[6,0,'T','Review, sign & stamp → Issue to employee'],[7,1,'G','Oracle HCM logs letter issuance in employee record'],[8,0,'E','Verification letter issued; record updated']],
  cx:[[0,1],[1,2],[2,3],[3,4,'Yes'],[3,5,'No'],[4,5],[5,6],[6,7],[7,8]]},
 
-{id:'hs035',ti:'HR Helpdesk',sop:'SOP-HCM-HS-035',cat:'hs',
+{id:'hs035',ti:'HR Helpdesk',sop:'sop/SOP-HCM-HS-035',cat:'hs',
  de:'HR Specialist manages employee HR queries and service requests submitted via the Oracle HCM HR Helpdesk module, resolving issues or routing to the appropriate team within SLA.',
  ro:'HR Specialist (resolver); Employee (requestor)',
  sy:'Oracle HCM Cloud – HR Helpdesk',
@@ -1653,7 +1653,7 @@ const PROC=[
  st:[[0,0,'S','Employee submits query via Oracle HCM Helpdesk'],[1,1,'G','Oracle HCM logs ticket & notifies HR Specialist'],[2,0,'T','HR Specialist reviews query & acknowledges within 4 hours'],[3,0,'D','Can resolve immediately?'],[4,0,'T','Resolve query & update ticket with resolution'],[5,0,'T','Route to specialist team with notes'],[6,1,'G','Oracle HCM closes ticket & notifies employee'],[7,0,'E','Query resolved; ticket closed within SLA']],
  cx:[[0,1],[1,2],[2,3],[3,4,'Yes'],[3,5,'No — route'],[4,6],[5,6],[6,7]]},
 
-{id:'hs036',ti:'Grade Step Progression',sop:'SOP-HCM-HS-036',cat:'hs',
+{id:'hs036',ti:'Grade Step Progression',sop:'sop/SOP-HCM-HS-036',cat:'hs',
  de:'HR Specialist processes grade step progression for eligible employees in Oracle HCM Cloud, advancing the employee to the next salary step within their current grade based on seniority or performance criteria.',
  ro:'HR Specialist (initiator); HR Manager (approval)',
  sy:'Oracle HCM Cloud – My Client Groups → Compensation → Grade Step',
@@ -1669,7 +1669,7 @@ const PROC=[
  st:[[0,0,'S','Identify eligible employees for grade step progression'],[1,0,'T','Login → My Client Groups → Compensation → Grade Step'],[2,0,'T','Search employee → Review current grade & step'],[3,0,'D','At maximum step?'],[4,0,'T','Flag for grade review → Notify HR Manager'],[5,0,'T','Select next step → Enter effective date → Submit'],[6,1,'G','HR Manager approves step progression'],[7,1,'G','Oracle HCM updates salary to new step amount'],[8,0,'E','Grade step advanced; salary updated']],
  cx:[[0,1],[1,2],[2,3],[3,4,'Yes — max'],[3,5,'No'],[4,8],[5,6],[6,7],[7,8]]},
 
-{id:'hs037',ti:'Add Assignment',sop:'SOP-HCM-HS-037',cat:'hs',
+{id:'hs037',ti:'Add Assignment',sop:'sop/SOP-HCM-HS-037',cat:'hs',
  de:'HR Specialist adds a secondary assignment to an existing employee record in Oracle HCM Cloud, enabling the employee to hold multiple roles or positions simultaneously under the same work relationship.',
  ro:'HR Specialist (initiator); HR Manager (approval)',
  sy:'Oracle HCM Cloud – My Client Groups → Person Management → Assignments',
@@ -1685,7 +1685,7 @@ const PROC=[
  st:[[0,0,'S','Receive approved secondary assignment request'],[1,0,'T','Login → My Client Groups → Person Management → Assignments'],[2,0,'T','Search employee → Click Add Assignment'],[3,0,'T','Select assignment type, position, grade & dept'],[4,0,'T','Set effective date → Submit for HR Manager approval'],[5,1,'G','HR Manager approves assignment'],[6,1,'G','Oracle HCM adds assignment to employee record'],[7,0,'E','Secondary assignment active; employee holds multiple roles']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]},
 
-{id:'hs038',ti:'Approvals (HR)',sop:'SOP-HCM-HS-038',cat:'hs',
+{id:'hs038',ti:'Approvals (HR)',sop:'sop/SOP-HCM-HS-038',cat:'hs',
  de:'HR Specialist reviews and processes approval actions in Oracle HCM Cloud — approving or rejecting HR transactions routed through the system workflow (promotions, transfers, salary changes, title changes, and others).',
  ro:'HR Specialist (approver); Line Manager or HR Specialist (initiator)',
  sy:'Oracle HCM Cloud – Bell Icon → Worklist → Pending Notifications',
@@ -1703,7 +1703,7 @@ const PROC=[
 
 // ── LINE MANAGER – SELF-SERVICE VIEW ─────────────────────────,
 
-{id:'lm001',ti:'Personal Details (LM View)',sop:'SOP-HCM-LM-001',cat:'lm',
+{id:'lm001',ti:'Personal Details (LM View)',sop:'sop/SOP-HCM-LM-001',cat:'lm',
  de:'Line Manager views the personal details of a direct report in Oracle HCM Cloud via My Team, providing visibility of name, contact, and basic personal information.',
  ro:'Line Manager (view only)',
  sy:'Oracle HCM Cloud – My Team → Person',
@@ -1718,7 +1718,7 @@ const PROC=[
  la:['l','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Team'],[2,0,'T','Select direct report employee'],[3,1,'G','Oracle HCM displays employee profile'],[4,0,'T','Review personal details (read-only)'],[5,0,'E','Personal details reviewed']]},
 
-{id:'lm002',ti:'Contact Details (LM View)',sop:'SOP-HCM-LM-002',cat:'lm',
+{id:'lm002',ti:'Contact Details (LM View)',sop:'sop/SOP-HCM-LM-002',cat:'lm',
  de:'Line Manager views contact details of a direct report in Oracle HCM Cloud for business communication and emergency purposes.',
  ro:'Line Manager (view only)',
  sy:'Oracle HCM Cloud – My Team → Contact Details',
@@ -1729,7 +1729,7 @@ const PROC=[
  la:['l','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Team → Select employee'],[2,1,'G','Oracle HCM displays employee profile'],[3,0,'T','Select Contact Details section'],[4,0,'T','Review contact information (read-only)'],[5,0,'E','Contact details reviewed']]},
 
-{id:'lm003',ti:'Emergency Contacts (LM View)',sop:'SOP-HCM-LM-003',cat:'lm',
+{id:'lm003',ti:'Emergency Contacts (LM View)',sop:'sop/SOP-HCM-LM-003',cat:'lm',
  de:'Line Manager views emergency contact information for direct reports in Oracle HCM Cloud, ensuring access in case of emergency.',
  ro:'Line Manager (view only)',sy:'Oracle HCM Cloud – My Team',sl:'Real-time',
  inp:'Manager credentials',out:'Emergency contact details viewed',
@@ -1738,7 +1738,7 @@ const PROC=[
  la:['l','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Team → Select employee'],[2,0,'T','Select Emergency Contacts section'],[3,1,'G','Oracle HCM displays emergency contacts'],[4,0,'T','Review emergency contact details'],[5,0,'E','Emergency contacts reviewed']]},
 
-{id:'lm004',ti:'Document Records (LM View)',sop:'SOP-HCM-LM-004',cat:'lm',
+{id:'lm004',ti:'Document Records (LM View)',sop:'sop/SOP-HCM-LM-004',cat:'lm',
  de:'Line Manager views document records and expiry dates for direct reports in Oracle HCM Cloud to monitor document compliance.',
  ro:'Line Manager (view only)',sy:'Oracle HCM Cloud – My Team → Documents',sl:'Real-time',
  inp:'Manager credentials',out:'Document status and expiry dates reviewed',
@@ -1748,7 +1748,7 @@ const PROC=[
  la:['l','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Team → Select employee'],[2,0,'T','Select Documents section'],[3,1,'G','Oracle HCM displays document list & expiry dates'],[4,0,'T','Review documents & flag any near-expiry'],[5,0,'E','Document status reviewed']]},
 
-{id:'lm005',ti:'National Identifiers (LM View)',sop:'SOP-HCM-LM-005',cat:'lm',
+{id:'lm005',ti:'National Identifiers (LM View)',sop:'sop/SOP-HCM-LM-005',cat:'lm',
  de:'Line Manager views national identifier summary for direct reports to verify visa/ID status. Sensitive numbers are masked.',
  ro:'Line Manager (view only)',sy:'Oracle HCM Cloud – My Team',sl:'Real-time',
  inp:'Manager credentials',out:'National identifier status viewed',
@@ -1758,7 +1758,7 @@ const PROC=[
  la:['l','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Team → Select employee'],[2,0,'T','Select Identification Info section'],[3,1,'G','Oracle HCM displays masked national identifiers'],[4,0,'T','Review identifier status'],[5,0,'E','National identifier status confirmed']]},
 
-{id:'lm006',ti:'Seniority Dates (LM View)',sop:'SOP-HCM-LM-006',cat:'lm',
+{id:'lm006',ti:'Seniority Dates (LM View)',sop:'sop/SOP-HCM-LM-006',cat:'lm',
  de:'Line Manager views seniority date information for direct reports to understand service length for leave, EOSB, or promotion planning.',
  ro:'Line Manager (view only)',sy:'Oracle HCM Cloud – My Team',sl:'Real-time',
  inp:'Manager credentials',out:'Seniority dates viewed',
@@ -1768,7 +1768,7 @@ const PROC=[
  la:['l','s'],
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to My Team → Select employee'],[2,0,'T','Select Employment Info → Seniority Dates'],[3,1,'G','Oracle HCM displays seniority date information'],[4,0,'T','Review enterprise & legal employer seniority dates'],[5,0,'E','Seniority dates reviewed']]},
 
-{id:'lm007',ti:'Pay Slips (LM View)',sop:'SOP-HCM-LM-007',cat:'lm',
+{id:'lm007',ti:'Pay Slips (LM View)',sop:'sop/SOP-HCM-LM-007',cat:'lm',
  de:'Line Manager does not have access to employee pay slips by default. This SOP outlines the exception process if access is required for a specific authorised purpose.',
  ro:'Line Manager (request only); HR Manager (approval)',sy:'Oracle HCM Cloud – HR Restricted',sl:'Exception only; HR Manager approval required within 1 business day',
  inp:'Written request, business justification, HR Manager approval',out:'Controlled access granted temporarily if approved; access removed after use',
@@ -1780,7 +1780,7 @@ const PROC=[
  st:[[0,0,'S','Line Manager submits written request with justification'],[1,1,'T','HR Manager reviews & approves/rejects'],[2,0,'D','Request approved?'],[3,0,'T','Inform manager: access not granted'],[4,1,'T','IT configures temporary restricted access'],[5,0,'T','LM accesses pay data within approved scope'],[6,1,'T','Access removed after purpose fulfilled'],[7,0,'E','Access event logged; data reviewed under approval']],
  cx:[[0,1],[1,2],[2,4,'Yes'],[2,3,'No'],[3,7],[4,5],[5,6],[6,7]]},
 
-{id:'lm008',ti:'Bank Accounts (LM View)',sop:'SOP-HCM-LM-008',cat:'lm',
+{id:'lm008',ti:'Bank Accounts (LM View)',sop:'sop/SOP-HCM-LM-008',cat:'lm',
  de:'Line Managers do not have access to employee bank account details. This SOP outlines the restricted nature of this data and the process for any exceptional access request.',
  ro:'Line Manager (no standard access)',sy:'Oracle HCM Cloud – Payroll Restricted',sl:'Not applicable — access not granted as standard',
  inp:'N/A for standard process',out:'Access denied by system — bank data restricted',
@@ -1792,7 +1792,7 @@ const PROC=[
 
 // ── LINE MANAGER – ACTIONS ────────────────────────────────────,
 
-{id:'lm009',ti:'Absence (LM)',sop:'SOP-HCM-LM-009',cat:'lm',
+{id:'lm009',ti:'Absence (LM)',sop:'sop/SOP-HCM-LM-009',cat:'lm',
  de:'Line Manager submits, approves, or rejects absence requests for direct reports in Oracle HCM Cloud, managing team leave coverage and ensuring accurate absence records.',
  ro:'Line Manager (initiator/approver); HR Specialist (oversight)',
  sy:'Oracle HCM Cloud – My Team → Absence',
@@ -1807,7 +1807,7 @@ const PROC=[
  la:['h','s'],
  st:[[0,0,'S','Receive approved secondary assignment request'],[1,0,'T','Login → My Client Groups → Person Management → Assignments'],[2,0,'T','Search employee → Click Add Assignment'],[3,0,'T','Select assignment type, position, grade & dept'],[4,0,'T','Set effective date → Submit for HR Manager approval'],[5,1,'G','HR Manager approves assignment'],[6,1,'G','Oracle HCM adds assignment to employee record'],[7,0,'E','Secondary assignment active; employee holds multiple roles']]},
 
-{id:'lm011',ti:'Hire an Employee (LM)',sop:'SOP-HCM-LM-011',cat:'lm',
+{id:'lm011',ti:'Hire an Employee (LM)',sop:'sop/SOP-HCM-LM-011',cat:'lm',
  de:'Line Manager initiates a hire request for a new direct report in Oracle HCM Cloud via My Team. HR Specialist validates, completes, and activates the employee record and triggers onboarding.',
  ro:'Line Manager (initiator); HR Specialist (validator & completer)',
  sy:'Oracle HCM Cloud – My Team → Add Direct Report → Hire',
@@ -1823,7 +1823,7 @@ const PROC=[
  st:[[0,0,'S','LM receives signed offer & confirms start date'],[1,0,'T','Login → My Team → Add Direct Report → Hire'],[2,0,'T','Enter hire date, legal employer & position'],[3,0,'T','Enter new hire name, employment type → Submit'],[4,2,'G','Oracle HCM notifies HR Specialist'],[5,1,'T','HR Specialist reviews & completes personal data'],[6,1,'T','Enter DOB, nationality, national ID, Arabic name, salary'],[7,1,'T','Validate grade and position → Submit hire record'],[8,2,'G','Oracle HCM creates employee record & assigns number'],[9,2,'G','Onboarding journey auto-triggered'],[10,0,'E','Employee record active; onboarding started']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10]]},
 
-{id:'lm012',ti:'Add Work Relationship (LM)',sop:'SOP-HCM-LM-012',cat:'lm',
+{id:'lm012',ti:'Add Work Relationship (LM)',sop:'sop/SOP-HCM-LM-012',cat:'lm',
  de:'Line Manager initiates a request to add a new work relationship for an existing employee in Oracle HCM Cloud; HR Specialist reviews, validates, and completes the transaction.',
  ro:'Line Manager (initiator); HR Specialist (completer)',
  sy:'Oracle HCM Cloud – My Team → Actions → Additional Assignment',
@@ -1837,7 +1837,7 @@ const PROC=[
  la:['l','h','s'],
  st:[[0,0,'S','LM identifies need for additional work relationship'],[1,0,'T','Navigate to My Team → Actions → Additional Assignment'],[2,0,'T','Submit request with business justification'],[3,2,'G','Oracle HCM notifies HR Specialist'],[4,1,'T','HR validates position, legal employer & payroll'],[5,1,'T','Complete work relationship per SOP-HCM-HS-021'],[6,2,'G','Oracle HCM adds work relationship'],[7,0,'E','Additional work relationship active']]},
 
-{id:'lm013',ti:'Terminate (LM)',sop:'SOP-HCM-LM-013',cat:'lm',
+{id:'lm013',ti:'Terminate (LM)',sop:'sop/SOP-HCM-LM-013',cat:'lm',
  de:'Line Manager initiates an employee termination request in Oracle HCM Cloud, providing reason and last working day. HR Specialist validates and processes the termination.',
  ro:'Line Manager (initiator); HR Specialist (processor); HR Manager (final approval)',
  sy:'Oracle HCM Cloud – My Team → Actions → Terminate',
@@ -1851,7 +1851,7 @@ const PROC=[
  la:['l','h','s'],
  st:[[0,0,'S','LM receives resignation or initiates termination'],[1,0,'T','Navigate to My Team → Actions → Terminate'],[2,0,'T','Enter last working day, reason → Submit to HR'],[3,2,'G','Oracle HCM notifies HR Specialist'],[4,1,'T','HR Specialist validates & obtains HR Manager approval'],[5,1,'T','Process termination per SOP-HCM-HS-022'],[6,2,'G','Oracle HCM terminates record; offboarding triggered'],[7,0,'E','Employee terminated; offboarding & final pay initiated']]},
 
-{id:'lm014',ti:'Change Manager (LM)',sop:'SOP-HCM-LM-014',cat:'lm',
+{id:'lm014',ti:'Change Manager (LM)',sop:'sop/SOP-HCM-LM-014',cat:'lm',
  de:'Line Manager initiates a manager change request for a direct report in Oracle HCM Cloud when reporting lines change due to org restructure or role changes. HR Specialist processes the update.',
  ro:'Line Manager (initiator); HR Specialist (processor)',
  sy:'Oracle HCM Cloud – My Team → Actions → Change Manager',
@@ -1865,7 +1865,7 @@ const PROC=[
  la:['l','h','s'],
  st:[[0,0,'S','LM identifies manager change requirement'],[1,0,'T','Submit request to HR: employee, new manager, effective date'],[2,2,'G','HR Specialist receives request'],[3,1,'T','Validate new manager status in Oracle HCM'],[4,1,'T','Process change per SOP-HCM-HS-023'],[5,2,'G','Oracle HCM updates manager & reroutes workflows'],[6,0,'E','Manager updated; new reporting line active']]},
 
-{id:'lm015',ti:'Promote (LM)',sop:'SOP-HCM-LM-015',cat:'lm',
+{id:'lm015',ti:'Promote (LM)',sop:'sop/SOP-HCM-LM-015',cat:'lm',
  de:'Line Manager initiates a promotion recommendation for a direct report in Oracle HCM Cloud. HR Specialist validates the eligibility and processes the promotion with compensation updates.',
  ro:'Line Manager (initiator); HR Specialist (processor); HR Manager (approver)',
  sy:'Oracle HCM Cloud – My Team → Actions → Promote',
@@ -1879,7 +1879,7 @@ const PROC=[
  la:['l','h','s'],
  st:[[0,0,'S','LM identifies promotion candidate & obtains approval'],[1,0,'T','Navigate to My Team → Actions → Promote'],[2,0,'T','Enter promotion date, new grade/title & salary → Submit'],[3,2,'G','Oracle HCM routes to HR Specialist'],[4,1,'T','HR validates grade, salary & position availability'],[5,1,'T','Submit for HR Manager approval per SOP-HCM-HS-024'],[6,1,'T','Process promotion in Oracle HCM'],[7,2,'G','Oracle HCM updates grade, title & payroll'],[8,0,'E','Promotion effective; employee notified']]},
 
-{id:'lm016',ti:'Transfer (LM)',sop:'SOP-HCM-LM-016',cat:'lm',
+{id:'lm016',ti:'Transfer (LM)',sop:'sop/SOP-HCM-LM-016',cat:'lm',
  de:'Line Manager initiates an employee transfer request in Oracle HCM Cloud for a direct report moving to a different department, BU, or location. HR Specialist finalises and processes.',
  ro:'Line Manager (initiator); HR Specialist (finaliser)',
  sy:'Oracle HCM Cloud – My Team → Actions → Transfer',
@@ -1893,7 +1893,7 @@ const PROC=[
  la:['l','h','s'],
  st:[[0,0,'S','LM agrees transfer with receiving manager'],[1,0,'T','Navigate to My Team → Actions → Transfer'],[2,0,'T','Enter transfer date, type, new dept/BU/location → Submit'],[3,2,'G','Oracle HCM routes to HR Specialist'],[4,1,'T','HR validates transfer details & seniority dates'],[5,1,'T','Finalise & process transfer per SOP-HCM-HS-025'],[6,2,'G','Oracle HCM updates work assignment & payroll'],[7,0,'E','Transfer complete; new assignment active']]},
 
-{id:'lm017',ti:'Global Transfer (LM)',sop:'SOP-HCM-LM-017',cat:'lm',
+{id:'lm017',ti:'Global Transfer (LM)',sop:'sop/SOP-HCM-LM-017',cat:'lm',
  de:'Line Manager initiates a global transfer request for a direct report moving between DMG legal entities. HR processes the cross-entity transfer including EOSB review and new work relationship creation.',
  ro:'Line Manager (initiator); HR Specialist (processor); HR Director (approver)',
  sy:'Oracle HCM Cloud – My Team → Actions → Global Transfer',
@@ -1907,7 +1907,7 @@ const PROC=[
  la:['l','h','s'],
  st:[[0,0,'S','LM proposes global transfer; obtains HR Director approval'],[1,0,'T','Submit formal request to HR with all details'],[2,2,'G','HR Specialist receives request'],[3,1,'T','Coordinate EOSB review with Finance'],[4,1,'T','Confirm destination position & immigration plan'],[5,1,'T','Process global transfer per SOP-HCM-HS-026'],[6,2,'G','Oracle HCM ends source relationship & creates destination work relationship'],[7,0,'E','Global transfer complete; employee active at new entity']]},
 
-{id:'lm018',ti:'Change Working Hours (LM)',sop:'SOP-HCM-LM-018',cat:'lm',
+{id:'lm018',ti:'Change Working Hours (LM)',sop:'sop/SOP-HCM-LM-018',cat:'lm',
  de:'Line Manager requests a change to an employee\'s working hours or FTE in Oracle HCM Cloud. HR Specialist validates compliance and processes the update.',
  ro:'Line Manager (initiator); HR Specialist (processor)',
  sy:'Oracle HCM Cloud – My Team → Actions → Change Working Hours',
@@ -1921,7 +1921,7 @@ const PROC=[
  la:['l','h','s'],
  st:[[0,0,'S','LM identifies need for working hours change'],[1,0,'T','Submit request to HR: employee, new schedule, effective date'],[2,2,'G','HR Specialist receives request'],[3,1,'T','Validate compliance & HR Manager approval (if FTE change)'],[4,1,'T','Process per SOP-HCM-HS-027'],[5,2,'G','Oracle HCM updates schedule & recalculates salary'],[6,0,'E','Working hours updated; payroll adjusted']]},
 
-{id:'lm019',ti:'Change Salary (LM)',sop:'SOP-HCM-LM-019',cat:'lm',
+{id:'lm019',ti:'Change Salary (LM)',sop:'sop/SOP-HCM-LM-019',cat:'lm',
  de:'Line Manager requests a salary change for a direct report following an approved compensation review or market adjustment. Compensation Manager and HR Manager sign-off required before HR processes.',
  ro:'Line Manager (initiator); Compensation Manager (approval); HR Specialist (processor)',
  sy:'Oracle HCM Cloud – My Team → Actions → Compensation',
@@ -1935,7 +1935,7 @@ const PROC=[
  la:['l','h','s'],
  st:[[0,0,'S','LM prepares salary change request with justification'],[1,0,'T','Submit to Compensation Manager for approval'],[2,1,'T','Compensation Manager reviews & approves'],[3,1,'T','HR Manager provides final sign-off'],[4,1,'T','HR Specialist processes salary change per SOP-HCM-HS-028'],[5,2,'G','Oracle HCM updates salary record & payroll'],[6,0,'E','Salary change effective from approved date']]},
 
-{id:'lm020',ti:'Change Business Title (LM)',sop:'SOP-HCM-LM-020',cat:'lm',
+{id:'lm020',ti:'Change Business Title (LM)',sop:'sop/SOP-HCM-LM-020',cat:'lm',
  de:'Line Manager requests a business title change for a direct report. HR Specialist validates against the DMG title taxonomy and processes the update in Oracle HCM Cloud.',
  ro:'Line Manager (initiator); HR Specialist (processor)',
  sy:'Oracle HCM Cloud – My Team → Actions → Change Business Title',
@@ -1949,7 +1949,7 @@ const PROC=[
  la:['l','h','s'],
  st:[[0,0,'S','LM proposes title change & obtains HR Manager approval'],[1,0,'T','Submit request to HR: employee, new title, effective date'],[2,2,'G','HR Specialist receives request'],[3,1,'T','Validate title against DMG taxonomy'],[4,1,'T','Process title change per SOP-HCM-HS-029'],[5,2,'G','Oracle HCM updates title in employee record & org chart'],[6,0,'E','Business title updated']]},
 
-{id:'lm021',ti:'Pulse Survey',sop:'SOP-HCM-LM-021',cat:'lm',
+{id:'lm021',ti:'Pulse Survey',sop:'sop/SOP-HCM-LM-021',cat:'lm',
  de:'Line Manager reviews team pulse survey results in Oracle HCM Cloud, identifying engagement trends and taking action on low-scoring areas with support from HR.',
  ro:'Line Manager (reviewer & action owner); HR (support & analytics)',
  sy:'Oracle HCM Cloud – My Team → Pulse Survey',
@@ -1964,7 +1964,7 @@ const PROC=[
  st:[[0,0,'S','Receive survey results notification'],[1,0,'T','Login → My Team → Pulse Survey Results'],[2,1,'G','Oracle HCM displays team engagement scores by dimension'],[3,0,'T','Review scores vs. previous period & DMG benchmark'],[4,0,'D','Score below 60% threshold?'],[5,0,'T','Notify HRBP → Draft action plan'],[6,0,'T','Schedule team discussion on survey themes'],[7,0,'E','Survey reviewed; action plan in progress']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5,'Yes'],[4,6,'No'],[5,6],[6,7]]},
 
-{id:'lm022',ti:'Approvals (LM)',sop:'SOP-HCM-LM-022',cat:'lm',
+{id:'lm022',ti:'Approvals (LM)',sop:'sop/SOP-HCM-LM-022',cat:'lm',
  de:'Line Manager reviews and processes approval notifications in Oracle HCM Cloud, approving or rejecting HR transactions requiring managerial sign-off (absence, self-service changes, and other routed approvals).',
  ro:'Line Manager (approver)',
  sy:'Oracle HCM Cloud – Bell Icon → Worklist',
@@ -1981,7 +1981,7 @@ const PROC=[
 
 // ── ORACLE RECRUITING CLOUD ───────────────────────────────────,
 
-{id:'orc001',ti:'Candidate Application – External',sop:'SOP-HCM-ORC-001',cat:'orc',
+{id:'orc001',ti:'Candidate Application – External',sop:'sop/SOP-HCM-ORC-001',cat:'orc',
  de:'External candidates apply for open positions through the DMG career portal (Oracle Recruiting Cloud), completing their profile, uploading documents, and submitting their application for HR screening.',
  ro:'Candidate (applicant); HR Recruiter (screener); Hiring Manager (interviewer)',
  sy:'Oracle Recruiting Cloud – External Career Portal',
@@ -1996,7 +1996,7 @@ const PROC=[
  st:[[0,0,'S','Candidate visits DMG career portal'],[1,0,'T','Search & select open position → Click Apply'],[2,2,'G','Oracle Recruiting Cloud creates candidate profile'],[3,0,'T','Complete application form → Upload CV & documents'],[4,0,'T','Review & submit application'],[5,2,'G','Oracle Recruiting Cloud assigns application number & notifies HR Recruiter'],[6,1,'T','HR Recruiter reviews & screens application'],[7,0,'D','Application progresses?'],[8,0,'T','Candidate receives regret notification'],[9,1,'T','HR Recruiter moves candidate to next stage'],[10,0,'E','Application submitted & pipeline stage assigned']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,9,'Yes'],[7,8,'No'],[8,10],[9,10]]},
 
-{id:'orc002',ti:'Candidate Application – Internal',sop:'SOP-HCM-ORC-002',cat:'orc',
+{id:'orc002',ti:'Candidate Application – Internal',sop:'sop/SOP-HCM-ORC-002',cat:'orc',
  de:'Existing DMG employees apply for internal open positions through Oracle Recruiting Cloud, using their existing Oracle HCM profile. HR manages the internal mobility process with appropriate approvals.',
  ro:'Employee (applicant); Current Line Manager (acknowledgement); HR Recruiter (processor)',
  sy:'Oracle Recruiting Cloud – Internal Career Site (Oracle HCM)',
@@ -2011,7 +2011,7 @@ const PROC=[
  st:[[0,0,'S','Employee identifies internal opportunity & notifies current manager'],[1,0,'T','Login to Oracle HCM → Navigate to Internal Career Site'],[2,0,'T','Search & select open position → Click Apply'],[3,2,'G','Oracle HCM auto-populates profile data'],[4,0,'T','Complete application form → Review & Submit'],[5,2,'G','Oracle Recruiting Cloud notifies HR Recruiter & current manager'],[6,1,'T','HR Recruiter screens application & reviews eligibility'],[7,0,'D','Application progresses?'],[8,1,'T','HR moves to interview stage per SOP-HCM-ORC-005'],[9,0,'T','Employee receives regret notification'],[10,0,'E','Internal application submitted & processed']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8,'Yes'],[7,9,'No'],[8,10],[9,10]]},
 
-{id:'orc003',ti:'Create Requisition',sop:'SOP-HCM-ORC-003',cat:'orc',
+{id:'orc003',ti:'Create Requisition',sop:'sop/SOP-HCM-ORC-003',cat:'orc',
  de:'Line Manager creates a job requisition in Oracle Recruiting Cloud to initiate the hiring process for an approved headcount. HR Recruiter validates, enriches, and approves the requisition for posting.',
  ro:'Line Manager (initiator); HR Recruiter (validator & approver); Finance (headcount confirmation)',
  sy:'Oracle Recruiting Cloud – Recruiting → Requisitions',
@@ -2026,7 +2026,7 @@ const PROC=[
  st:[[0,0,'S','LM receives headcount approval & prepares job description'],[1,0,'T','Login → Oracle Recruiting → Requisitions → Create'],[2,0,'T','Enter position, grade, location, hiring team & JD'],[3,0,'T','Select posting type (internal / external / both) → Submit'],[4,2,'G','Oracle Recruiting routes requisition to HR Recruiter'],[5,1,'T','HR Recruiter reviews, enriches & validates headcount'],[6,1,'D','Approved for posting?'],[7,1,'T','Return to LM with feedback for revision'],[8,1,'T','Approve requisition'],[9,2,'G','Oracle Recruiting posts to career portal'],[10,0,'E','Requisition live; applications open']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,8,'Yes'],[6,7,'No'],[7,5],[8,9],[9,10]]},
 
-{id:'orc004',ti:'Creating Job Offer',sop:'SOP-HCM-ORC-004',cat:'orc',
+{id:'orc004',ti:'Creating Job Offer',sop:'sop/SOP-HCM-ORC-004',cat:'orc',
  de:'HR Recruiter creates and manages the formal job offer in Oracle Recruiting Cloud for the selected candidate, including compensation, grade, start date, and approval routing before dispatch.',
  ro:'HR Recruiter (creator); Compensation Manager (salary approval); HR Manager (sign-off); Candidate (acceptor)',
  sy:'Oracle Recruiting Cloud – Candidate Selection → Offer',
@@ -2041,7 +2041,7 @@ const PROC=[
  st:[[0,0,'S','Candidate verbally accepts; HR Recruiter initiates offer'],[1,0,'T','Login → Oracle Recruiting → Candidate Record → Create Offer'],[2,0,'T','Enter salary, grade, start date & benefits'],[3,0,'T','Submit for Compensation Manager approval'],[4,1,'G','Compensation Manager approves salary in Oracle Recruiting'],[5,0,'T','Submit for HR Manager final sign-off'],[6,1,'G','Oracle Recruiting generates formal offer letter'],[7,0,'T','Dispatch offer to candidate via Oracle portal'],[8,0,'D','Candidate accepts?'],[9,1,'G','Candidate acceptance recorded → Hire workflow triggered'],[10,0,'T','Close requisition & notify hiring manager'],[11,0,'E','Offer accepted; hire workflow initiated per SOP-HCM-HS-020']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9,'Yes'],[8,0,'No — re-engage'],[9,10],[10,11]]},
 
-{id:'orc005',ti:'Candidate Selection',sop:'SOP-HCM-ORC-005',cat:'orc',
+{id:'orc005',ti:'Candidate Selection',sop:'sop/SOP-HCM-ORC-005',cat:'orc',
  de:'HR Recruiter and Hiring Manager manage the end-to-end candidate selection process in Oracle Recruiting Cloud, from screening and interviews through to final selection and offer initiation.',
  ro:'HR Recruiter (process owner); Line Manager (interviewer/decision maker); Candidates (participants)',
  sy:'Oracle Recruiting Cloud – Candidate Pipeline',
@@ -2056,7 +2056,7 @@ const PROC=[
  st:[[0,1,'S','Requisition open; applications received'],[1,1,'T','HR Recruiter screens applications → Move to shortlist'],[2,2,'G','Oracle Recruiting updates candidate stage'],[3,0,'T','Hiring Manager reviews shortlist → Confirms interview list'],[4,1,'T','Schedule interviews → Send calendar invites via Oracle'],[5,0,'T','Conduct structured interviews → Score per guide'],[6,1,'T','Collect interview feedback in Oracle Recruiting'],[7,0,'D','Candidate selected?'],[8,0,'T','Re-open to remaining pipeline or re-post'],[9,1,'T','Confirm selection; complete reference checks'],[10,1,'T','Initiate offer per SOP-HCM-ORC-004'],[11,1,'T','Send regret notifications to unsuccessful candidates'],[12,0,'E','Selection complete; offer process initiated']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,9,'Yes'],[7,8,'No'],[8,4],[9,10],[10,11],[11,12]]},
 
-{id:'lm010',ti:'My Team',sop:'SOP-HCM-LM-010',cat:'lm',
+{id:'lm010',ti:'My Team',sop:'sop/SOP-HCM-LM-010',cat:'lm',
  de:'Line Manager uses the My Team feature in Oracle HCM Cloud as the primary hub for viewing and managing all direct reports, accessing employee records, and initiating team-level HR actions.',
  ro:'Line Manager (navigator & initiator)',
  sy:'Oracle HCM Cloud – My Team',
