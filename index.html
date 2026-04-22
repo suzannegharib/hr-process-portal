@@ -305,13 +305,13 @@ body{font-family:'Cambria',Georgia,serif;font-size:16px;background:var(--bg);col
         <div class="pc-top"><div class="pc-icon">📋</div>
           <div><div class="pc-ti">Document Records</div><div class="pc-sop">SOP-HCM-EE-004</div></div>
         </div>
-        <div class="pc-desc">Employees view, upload, and manage personal documents such as passport, visa, Emirates ID, and other required identification documents in Oracle HCM.</div>
+        <div class="pc-desc">Employees view, upload, and manage personal documents such as passport, visa, Egyptian ID, and other required identification documents in Oracle HCM.</div>
         <div class="pc-footer"><span class="role-pill" style="color:#1D4ED8;background:#DBEAFE">Employee</span><span class="sla-badge">⏱ Upload immediate</span></div>
       </div><div class="pc" data-id="ee005" onclick="showProc(&#39;ee005&#39;)">
         <div class="pc-top"><div class="pc-icon">📋</div>
           <div><div class="pc-ti">National Identifiers</div><div class="pc-sop">SOP-HCM-EE-005</div></div>
         </div>
-        <div class="pc-desc">Employees view their national identifier records (Emirates ID, Passport Number, National ID) stored in Oracle HCM Cloud. Updates to these fields are restricted to HR Specialists.</div>
+        <div class="pc-desc">Employees view their national identifier records (Egyptian National ID, Passport Number, Social Insurance Number) stored in Oracle HCM Cloud. Updates to these fields are restricted to HR Specialists.</div>
         <div class="pc-footer"><span class="role-pill" style="color:#1D4ED8;background:#DBEAFE">Employee</span><span class="sla-badge">⏱ View: immediate</span></div>
       </div><div class="pc" data-id="ee006" onclick="showProc(&#39;ee006&#39;)">
         <div class="pc-top"><div class="pc-icon">📋</div>
@@ -324,12 +324,12 @@ body{font-family:'Cambria',Georgia,serif;font-size:16px;background:var(--bg);col
           <div><div class="pc-ti">Pay Slips</div><div class="pc-sop">SOP-HCM-EE-007</div></div>
         </div>
         <div class="pc-desc">Employees access and download their monthly pay slips directly from Oracle HCM Cloud, providing a transparent view of earnings, deductions, and net pay.</div>
-        <div class="pc-footer"><span class="role-pill" style="color:#1D4ED8;background:#DBEAFE">Employee</span><span class="sla-badge">⏱ Pay slips available by 25th of each mo…</span></div>
+        <div class="pc-footer"><span class="role-pill" style="color:#1D4ED8;background:#DBEAFE">Employee</span><span class="sla-badge">⏱ Pay slips available by 28th of each mo…</span></div>
       </div><div class="pc" data-id="ee008" onclick="showProc(&#39;ee008&#39;)">
         <div class="pc-top"><div class="pc-icon">🔄</div>
           <div><div class="pc-ti">Bank Accounts</div><div class="pc-sop">SOP-HCM-EE-008</div></div>
         </div>
-        <div class="pc-desc">Employees add or update their bank account details in Oracle HCM Cloud for salary payment, ensuring accurate WPS-compliant routing of payroll.</div>
+        <div class="pc-desc">Employees add or update their bank account details in Oracle HCM Cloud for salary payment, ensuring accurate SWIFT-compliant routing of payroll.</div>
         <div class="pc-footer"><span class="role-pill" style="color:#1D4ED8;background:#DBEAFE">Employee</span><span class="sla-badge">⏱ Account change effective from next pay…</span></div>
       </div><div class="pc" data-id="ee009" onclick="showProc(&#39;ee009&#39;)">
         <div class="pc-top"><div class="pc-icon">🔄</div>
@@ -1036,7 +1036,7 @@ const PROC=[
  out:'View of national identifier records; update request if needed',
  ru:'National identifier fields are read-only for employees. Any corrections must be requested through HR Helpdesk and processed by HR Specialist. Emirates ID must match MOL records.',
  ex:'Incorrect national ID: raise to HR Helpdesk referencing SOP-HCM-HS-017. System error: contact IT.',
- ri:'Incorrect national identifiers may cause MOHRE/GOSI compliance failures or payroll/visa processing errors.',
+ ri:'Incorrect national identifiers may lead to non-compliance with Egyptian regulations, including issues with National ID system, Social Insurance Authority requirements, as well as payroll processing errors and employment documentation issues.',
  dp:'Active employee record; national ID data entered by HR at hire',
  rf:'SOP-HCM-EE-005; SOP-HCM-HS-017',
  la:['e','s'],
@@ -1075,15 +1075,15 @@ const PROC=[
  st:[[0,0,'S','Login to Oracle HCM Cloud'],[1,0,'T','Navigate to Me → Pay → Pay Slips'],[2,0,'T','Select pay period / month'],[3,1,'G','Oracle HCM retrieves payslip data'],[4,0,'T','Review earnings, deductions & net pay'],[5,0,'T','Click Download to save PDF payslip'],[6,0,'E','Pay slip accessed & downloaded']]},
 
 {id:'ee008',ti:'Bank Accounts',sop:'sop/SOP-HCM-EE-008',cat:'ee',
- de:'Employees add or update their bank account details in Oracle HCM Cloud for salary payment, ensuring accurate WPS-compliant routing of payroll.',
+ de:'Employees add or update their bank account details in Oracle HCM Cloud for salary payment, ensuring accurate SWIFT-compliant routing of payroll.',
  ro:'Employee (initiator); HR Specialist (approval for changes)',
  sy:'Oracle HCM Cloud – Me → Pay → Bank Accounts',
  sl:'Account change effective from next payroll run; requires HR approval within 1 business day',
  inp:'Bank name, account number, IBAN, account type, effective date',
- out:'Updated bank account record; WPS routing updated',
+ out:'Updated bank account record; SWIFT routing updated',
  ru:'IBAN must be 29 characters for EGYPT. One active primary account required. Changes take effect from next closed payroll. Existing account cannot be deleted if associated with open payroll.',
  ex:'Invalid IBAN: system validation error — correct and resubmit. Multiple primary accounts: system will reject — deactivate old account first.',
- ri:'Incorrect bank details cause failed salary payments and WPS compliance breaches.',
+ ri:'Incorrect bank details cause failed salary payments and SWIFT compliance breaches.',
  dp:'Payroll not closed for current period; EGYPT bank account details',
  rf:'SOP-HCM-EE-008; EGYPT Bank Regulations; DMG Payroll Policy',
  la:['e','s'],
@@ -1133,7 +1133,7 @@ const PROC=[
  out:'Legal employer record in Oracle HCM; payroll statutory unit linked',
  ru:'Legal entity name must exactly match trade licence. Payroll Statutory Unit must be linked. Country and tax registration must be accurate for compliance. Requires System Admin access.',
  ex:'Entity already exists: update existing record. Registration number conflict: verify with Finance/Legal.',
- ri:'Incorrect legal employer data causes WPS, GOSI, and tax compliance failures.',
+ ri:'Incorrect legal employer data may lead to non-compliance with Egyptian payroll regulations, including Social Insurance requirements, tax obligations, and electronic salary transfer processes.',
  dp:'Trade licence; Finance approval; System Admin access',
  rf:'SOP-HCM-HS-002; EGYPT Commercial Registration; Oracle HCM Legal Entity Guide',
  la:['h','s'],
@@ -1408,11 +1408,11 @@ const PROC=[
  sl:'Hire record created same day; onboarding journey triggered within 24 hours',
  inp:'Offer letter, signed contract, personal data form, passport/ID copies, hire date, position, grade, salary',
  out:'Employee record created in Oracle HCM; employee number assigned; onboarding journey triggered; payroll record created',
- ru:'Hire date must match contract. Legal employer and BU must match approved position. Both English and Arabic names required. National ID/Emirates ID mandatory before WPS payroll processing. Grade must fall within approved grade for position. Salary must be within grade rate range.',
+ ru:'Hire date must match contract. Legal employer and BU must match approved position. Both English and Arabic names required. National ID/Social Insurance Number mandatory before payroll processing. Grade must fall within approved grade for position. Salary must be within grade rate range.',
  ex:'Position not available: create position per SOP-HCM-HS-008. Document incomplete: hold hire record until docs received. Duplicate person record found: do not create — update existing record.',
- ri:'Incorrect hire date causes EOSB miscalculation. Missing documents cause visa/WPS compliance failures. Incorrect grade/salary breaches pay equity policy.',
+ ri:'Incorrect hire date may lead to End-of-Service Benefits miscalculation. Missing required documents may result in non-compliance with Egyptian labor, social insurance, and payroll processes. Incorrect grade or salary may lead to breaches in internal pay equity policies.',
  dp:'Position exists and approved; grade and salary rates configured; documents received',
- rf:'SOP-HCM-HS-020; SOP-HCM-HS-008; EGYPT Labour Law; WPS Regulations',
+ rf:'SOP-HCM-HS-020; SOP-HCM-HS-008; EGYPT Labour Law; Law Regulations',
  la:['h','s'],
  st:[[0,0,'S','Receive approved hire documents'],[1,0,'T','Login → My Client Groups → Quick Actions → Hire an Employee'],[2,0,'T','Enter hire date, legal employer & business unit'],[3,0,'T','Enter name (English & Arabic), DOB, gender, nationality'],[4,0,'T','Enter National ID / Emirates ID / passport details'],[5,0,'T','Select job, grade, position, department & location'],[6,0,'T','Set work relationship type (Employee/Contingent)'],[7,0,'T','Enter salary basis, grade & amount'],[8,0,'D','All sections complete & verified?'],[9,0,'T','Review all sections → Click Submit'],[10,1,'G','Oracle HCM creates employee record & assigns employee number'],[11,1,'G','Onboarding journey auto-triggered'],[12,0,'E','Employee record active; number assigned; onboarding started']],
  cx:[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9,'Yes'],[8,2,'No — correct'],[9,10],[10,11],[11,12]]},
@@ -1786,7 +1786,7 @@ const PROC=[
  inp:'N/A for standard process',out:'Access denied by system — bank data restricted',
  ru:'Bank account information is strictly restricted to Payroll/HR Specialist roles only. Line Managers must never have access to employee banking details. Any access request must be escalated to the CHRO.',
  ex:'Manager requests access: document refusal; notify HR Director.',ri:'Unauthorized access to banking data creates fraud and compliance risk.',
- dp:'Oracle HCM role security configured to restrict manager access to banking data',rf:'SOP-HCM-LM-008; DMG Data Privacy Policy; WPS Compliance',
+ dp:'Oracle HCM role security configured to restrict manager access to banking data',rf:'SOP-HCM-LM-008; DMG Data Privacy Policy; Egyptian payroll Compliance',
  la:['l','h'],
  st:[[0,0,'S','Line Manager queries bank account access'],[1,1,'T','HR Specialist clarifies: access not permitted'],[2,0,'T','LM directed to HR Helpdesk if query relates to payment issue'],[3,1,'T','Payroll team addresses payment query directly'],[4,0,'E','Query resolved; bank data access restricted per policy']]},
 
@@ -2645,7 +2645,7 @@ function buildDocsLibrary(){
       <tr style="display:grid;grid-template-columns:1fr;background:#ECFDF5;padding:8px 20px 4px;border-top:2px dashed #A7F3D0">
       </tr>
       <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-001</div><div class="dlib-row-title">Employee Payroll Relationship</div></div><div class="dlib-row-desc">Process for setting up and managing employee payroll relationships in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-001_Employee_Payroll_Relationship.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
-      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-002</div><div class="dlib-row-title">Personal Payment Methods</div></div><div class="dlib-row-desc">Process for managing employee personal payment methods (bank accounts, WPS) in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-002_Personal_Payment_Methods.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
+      <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-002</div><div class="dlib-row-title">Personal Payment Methods</div></div><div class="dlib-row-desc">Process for managing employee personal payment methods (bank accounts, IBAN, SWIFT Code) in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-002_Personal_Payment_Methods.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
       <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-003</div><div class="dlib-row-title">Manage Employee Salary</div></div><div class="dlib-row-desc">Process for entering, adjusting, and validating employee salary components within Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-003_Manage_Employee_Salary.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
       <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-004</div><div class="dlib-row-title">Employee Element Entry</div></div><div class="dlib-row-desc">Process for managing payroll element entries (allowances, deductions) for employees in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-004_Employee_Element_Entry.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
       <div class="dlib-row"><div><div class="dlib-row-id">SOP-PAY-005</div><div class="dlib-row-title">Retroactive Payroll Calculation</div></div><div class="dlib-row-desc">Process for processing retroactive payroll calculations and back-pay in Oracle HCM Payroll.</div><div class="dlib-btns">${sopBtns('sop/SOP-PAY-005_Retroactive_Payroll_Calculation.docx')}<a class="dlib-btn ug" href="${UG_PAY}" target="_blank">&#128218; UG</a></div></div>
