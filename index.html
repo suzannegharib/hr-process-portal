@@ -155,7 +155,7 @@ body{font-family:'Cambria',Georgia,serif;font-size:16px;background:var(--bg);col
 .docs-empty{background:#fff;border-radius:10px;border:1px solid var(--border);padding:24px;text-align:center;color:var(--txt2);font-size:14px}
 /* ── Documents Library ── */
 #docs-view{padding:24px;display:none}
-.dlib-hero{background:linear-gradient(135deg,#0F2A5E 0%,#1E3A8A 55%,#3B6CB7 100%);color:#fff;border-radius:14px;padding:24px 32px;margin-bottom:22px;display:flex;align-items:center;gap:20px}
+.dlib-hero{background:linear-gradient(135deg,#f92565 0%,#1E3A8A 55%,#F40B51 100%);color:#fff;border-radius:14px;padding:24px 32px;margin-bottom:22px;display:flex;align-items:center;gap:20px}
 .dlib-hero-ic{font-size:40px}
 .dlib-hero-h{font-size:22px;font-weight:800;margin-bottom:4px}
 .dlib-hero-s{font-size:14px;opacity:.88;line-height:1.5}
@@ -213,14 +213,14 @@ body{font-family:'Cambria',Georgia,serif;font-size:16px;background:var(--bg);col
 .sbf-pills .fc:hover{border-color:var(--brand);color:var(--brand);background:#EFF6FF}
 .sbf-pills .fc.on{background:var(--brand);border-color:var(--brand);color:#fff}
 /* ── Docs Library Filter Bar ──────────────────────────────────── */
-.dlib-fbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:12px 22px 14px;background:#F3F8FF;border-bottom:1.5px solid #BDD4F4;margin-bottom:20px;border-radius:0 0 12px 12px}
+.dlib-fbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:12px 22px 14px;background:#F0F5FF;border-bottom:1.5px solid var(--border);margin-bottom:20px;border-radius:0 0 12px 12px}
 .dlib-fg{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
-.dlib-fl{font-size:11.5px;font-weight:800;color:#3558A0;text-transform:uppercase;letter-spacing:.6px;white-space:nowrap;margin-right:3px;min-width:fit-content}
-.dlib-fp{padding:5px 12px;border-radius:18px;border:1.5px solid #BDD4F4;background:#F2F7FF;font-size:12px;cursor:pointer;color:#3558A0;font-weight:600;transition:all .15s;white-space:nowrap}
-.dlib-fp:hover{border-color:#3558A0;background:#D9EAFF}
-.dlib-fp.on{background:#3558A0;border-color:#3558A0;color:#fff}
-.dlib-freset{margin-left:auto;padding:6px 16px;border-radius:8px;border:1.5px solid #3558A0;background:#fff;font-size:13px;cursor:pointer;color:#3558A0;font-weight:700;transition:all .15s;white-space:nowrap;flex-shrink:0}
-.dlib-freset:hover{background:#3558A0;color:#fff}
+.dlib-fl{font-size:11.5px;font-weight:800;color:var(--brand);text-transform:uppercase;letter-spacing:.6px;white-space:nowrap;margin-right:3px;min-width:fit-content}
+.dlib-fp{padding:5px 12px;border-radius:18px;border:1.5px solid var(--border);background:var(--bg);font-size:12px;cursor:pointer;color:var(--brand);font-weight:600;transition:all .15s;white-space:nowrap}
+.dlib-fp:hover{border-color:var(--brand);background:#DBEAFE}
+.dlib-fp.on{background:var(--brand);border-color:var(--brand);color:#fff}
+.dlib-freset{margin-left:auto;padding:6px 16px;border-radius:8px;border:1.5px solid var(--brand);background:#fff;font-size:13px;cursor:pointer;color:var(--brand);font-weight:700;transition:all .15s;white-space:nowrap;flex-shrink:0}
+.dlib-freset:hover{background:var(--brand);color:#fff}
 </style>
 </head>
 <body>
@@ -2267,12 +2267,22 @@ function applyFilters(){
     const p=PROC.find(x=>x.id===el.dataset.id);
     el.style.display=(noFilter||( p&&matchesFilters(p)))?'':'none';
   });
-  document.querySelectorAll('#docs-view .dlib-sec').forEach(sec=>{
-    const rows=sec.querySelectorAll('.dlib-row[data-id]');
-    if(!rows.length) return;
-    const vis=[...rows].filter(r=>r.style.display!=='none').length;
-    sec.style.opacity=vis===0?'0.35':'1';
+  updateDlibSectionVisibility();
+  // ── Standalone docs rows (data-type / data-mod, no data-id) ─────────────
+  document.querySelectorAll('#docs-view .dlib-row:not([data-id])').forEach(el=>{
+    const modVal  = el.dataset.mod  || '';
+    const typeVal = el.dataset.type || '';
+    let show = true;
+    if(AF.mod.size > 0){
+      const modMap = {chr:'corehr', pay:'pay', otl:'otl', abs:'abs', orc:'orc', ga:'ga', guides:'guides'};
+      const allowed = [...AF.mod].map(k=>modMap[k]||k);
+      if(!allowed.includes(modVal)) show = false;
+    }
+    if(AF.atype.size > 0) show = false; // standalone rows have no action type
+    if(AF.role.size > 0)  show = false; // standalone rows have no role data
+    el.style.display = show ? '' : 'none';
   });
+  updateDlibSectionVisibility();
   const dlibCt=document.getElementById('dlib-ct');
   if(dlibCt){
     const vis=[...document.querySelectorAll('#docs-view .dlib-row')].filter(r=>r.style.display!=='none').length;
@@ -2364,6 +2374,17 @@ function filterNav(q){
   const totalVis=document.querySelectorAll('.pc:not(.pc-hidden)').length;
   const ct=document.getElementById('sbf-ct');
   if(ct)ct.textContent=totalVis;
+  // ── Docs library text search ─────────────────────────────────────────────
+  if(document.getElementById('docs-view').style.display !== 'none'){
+    document.querySelectorAll('#docs-view .dlib-row').forEach(el=>{
+      const title = (el.querySelector('.dlib-row-title')||{}).textContent||'';
+      const id    = (el.querySelector('.dlib-row-id')||{}).textContent||'';
+      const desc  = (el.querySelector('.dlib-row-desc')||{}).textContent||'';
+      const match = !low || title.toLowerCase().includes(low) || id.toLowerCase().includes(low) || desc.toLowerCase().includes(low);
+      el.style.display = match ? '' : 'none';
+    });
+    updateDlibSectionVisibility();
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -2606,6 +2627,15 @@ function buildSteps(proc){
 // \u2500\u2500 INIT \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 
 // ── DOCUMENTS LIBRARY ─────────────────────────────────────────────────────────
+function updateDlibSectionVisibility(){
+  document.querySelectorAll('#docs-view .dlib-sec').forEach(sec=>{
+    const rows = sec.querySelectorAll('.dlib-row');
+    const vis  = [...rows].filter(r=>r.style.display!=='none').length;
+    sec.style.opacity = vis === 0 ? '0.35' : '1';
+    const ct = sec.querySelector('.dlib-sec-ct');
+    if(ct) ct.textContent = vis + ' document' + (vis !== 1 ? 's' : '');
+  });
+}
 function showDocsLibrary(){
   document.getElementById('landing').style.display='none';
   document.getElementById('pv').style.display='none';
@@ -2664,7 +2694,7 @@ function buildDocsLibrary(){
 
   // ── Consolidated Resources — MASTER DOC + FULL MODULE GUIDES ONLY ─────────
   const consolidatedHtml=`<div class="dlib-sec">
-     <div class="dlib-sec-hdr open" onclick="toggleDlibSec(this)" style="background:linear-gradient(135deg,#1F3864,#2E5090);border-radius:10px 10px 0 0">
+     <div class="dlib-sec-hdr open" onclick="toggleDlibSec(this)" style="background:linear-gradient(135deg,#f92565 0%,#1E3A8A 55%,#F40B51 100%);border-radius:10px 10px 0 0">
       <span class="dlib-sec-icon">&#128218;</span>
       <span class="dlib-sec-title" style="color:#fff;font-weight:800">Consolidated Resources & Full Module  Guides</span>
       <span class="dlib-sec-ct" style="background:rgba(255,255,255,0.2);color:#fff">4 documents</span>
@@ -2721,7 +2751,7 @@ function buildDocsLibrary(){
 
   <!-- Core HR SOPs -->
      <div class="dlib-sec">
-     <div class="dlib-sec-hdr open" onclick="toggleDlibSec(this)" style="background:linear-gradient(135deg,#1F3864,#2E5090);border-radius:10px 10px 0 0">
+     <div class="dlib-sec-hdr open" onclick="toggleDlibSec(this)" style="background:linear-gradient(135deg,#f92565 0%,#1E3A8A 55%,#F40B51 100%);border-radius:10px 10px 0 0">
       <span class="dlib-sec-icon">&#128218;</span>
       <span class="dlib-sec-title" style="color:#fff;font-weight:800">Consolidated Resources Core HR Module  Guides</span>
       <span class="dlib-sec-ct" style="background:rgba(255,255,255,0.2);color:#fff">102 documents</span>
@@ -3024,7 +3054,7 @@ function buildDocsLibrary(){
 
   <!-- Payroll -->
      <div class="dlib-sec">
-     <div class="dlib-sec-hdr open" onclick="toggleDlibSec(this)" style="background:linear-gradient(135deg,#1F3864,#2E5090);border-radius:10px 10px 0 0">
+     <div class="dlib-sec-hdr open" onclick="toggleDlibSec(this)" style="background:linear-gradient(135deg,#f92565 0%,#1E3A8A 55%,#F40B51 100%);border-radius:10px 10px 0 0">
       <span class="dlib-sec-icon">&#128218;</span>
       <span class="dlib-sec-title" style="color:#fff;font-weight:800">Consolidated ResourcesPayroll  Module  Guides</span>
       <span class="dlib-sec-ct" style="background:rgba(255,255,255,0.2);color:#fff">10 documents</span>
@@ -3049,7 +3079,7 @@ function buildDocsLibrary(){
 
   <!-- OTL -->
      <div class="dlib-sec">
-     <div class="dlib-sec-hdr open" onclick="toggleDlibSec(this)" style="background:linear-gradient(135deg,#1F3864,#2E5090);border-radius:10px 10px 0 0">
+     <div class="dlib-sec-hdr open" onclick="toggleDlibSec(this)" style="background:linear-gradient(135deg,#f92565 0%,#1E3A8A 55%,#F40B51 100%);border-radius:10px 10px 0 0">
       <span class="dlib-sec-icon">&#128218;</span>
       <span class="dlib-sec-title" style="color:#fff;font-weight:800">Consolidated Resources OTL (Time & Labor)  Module  Guides</span>
       <span class="dlib-sec-ct" style="background:rgba(255,255,255,0.2);color:#fff">6 documents</span>
@@ -3070,7 +3100,7 @@ function buildDocsLibrary(){
 
   <!-- ORC -->
      <div class="dlib-sec">
-     <div class="dlib-sec-hdr open" onclick="toggleDlibSec(this)" style="background:linear-gradient(135deg,#1F3864,#2E5090);border-radius:10px 10px 0 0">
+     <div class="dlib-sec-hdr open" onclick="toggleDlibSec(this)" style="background:linear-gradient(135deg,#f92565 0%,#1E3A8A 55%,#F40B51 100%);border-radius:10px 10px 0 0">
       <span class="dlib-sec-icon">&#128218;</span>
       <span class="dlib-sec-title" style="color:#fff;font-weight:800">Consolidated Resources (ORC) Recruitment  Module  Guides</span>
       <span class="dlib-sec-ct" style="background:rgba(255,255,255,0.2);color:#fff">6 documents</span>
@@ -3091,7 +3121,7 @@ function buildDocsLibrary(){
 
   <!-- Absence -->
      <div class="dlib-sec">
-     <div class="dlib-sec-hdr open" onclick="toggleDlibSec(this)" style="background:linear-gradient(135deg,#1F3864,#2E5090);border-radius:10px 10px 0 0">
+     <div class="dlib-sec-hdr open" onclick="toggleDlibSec(this)" style="background:linear-gradient(135deg,#f92565 0%,#1E3A8A 55%,#F40B51 100%);border-radius:10px 10px 0 0">
       <span class="dlib-sec-icon">&#128218;</span>
       <span class="dlib-sec-title" style="color:#fff;font-weight:800">Consolidated Resources Absence Management Module  Guides</span>
       <span class="dlib-sec-ct" style="background:rgba(255,255,255,0.2);color:#fff">5 documents</span>
